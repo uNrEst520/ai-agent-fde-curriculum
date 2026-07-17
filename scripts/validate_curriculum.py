@@ -18,8 +18,7 @@ REQUIRED = [
     "CONTRIBUTING.md",
     "docs/curriculum/README.md",
     "docs/curriculum/competency-framework.md",
-    "docs/curriculum/foundation-12-weeks.md",
-    "docs/curriculum/lifelong-pathways.md",
+    "docs/curriculum/catalog.json",
     "docs/curriculum/learning-contract.md",
     "docs/curriculum/assessment.md",
     "docs/curriculum/fde-capstone.md",
@@ -44,7 +43,7 @@ PRIVACY_PATTERNS = [
     ("Linux user profile path", re.compile(r"/home/[A-Za-z0-9._-]+/")),
 ]
 SECRET_PATTERNS = [
-    ("OpenAI-style API key", re.compile(r"sk-[A-Za-z0-9_-]{16,}")),
+    ("OpenAI-style API key", re.compile(r"(?<![A-Za-z0-9])sk-[A-Za-z0-9_-]{16,}")),
     ("GitHub token", re.compile(r"gh[pousr]_[A-Za-z0-9]{16,}")),
     ("Google API key", re.compile(r"AIza[0-9A-Za-z_-]{20,}")),
     (
@@ -157,12 +156,113 @@ def check_research_sources() -> list[str]:
     return errors
 
 
+def check_curriculum_catalog() -> list[str]:
+    path = ROOT / "docs" / "curriculum" / "catalog.json"
+    if not path.exists():
+        return []
+    try:
+        data = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"invalid curriculum catalog: {exc}"]
+
+    modules = data.get("modules")
+    if not isinstance(modules, list) or not modules:
+        return ["curriculum catalog must contain modules"]
+
+    errors: list[str] = []
+    ids: list[str] = []
+    for index, module in enumerate(modules):
+        if not isinstance(module, dict):
+            errors.append(f"catalog module {index} must be an object")
+            continue
+        for field in (
+            "id", "title", "stage", "duration_weeks",
+            "prerequisites", "page", "build"
+        ):
+            if field not in module:
+                errors.append(f"catalog module {index} missing {field}")
+        module_id = module.get("id")
+        if isinstance(module_id, str):
+            ids.append(module_id)
+        if (
+            not isinstance(module.get("duration_weeks"), int)
+            or module.get("duration_weeks", 0) < 1
+        ):
+            errors.append(f"catalog module {module_id or index} has invalid duration")
+        if not isinstance(module.get("build"), str) or not module.get("build", "").strip():
+            errors.append(f"catalog module {module_id or index} must define a build")
+
+    duplicate_ids = sorted({module_id for module_id in ids if ids.count(module_id) > 1})
+    errors.extend(f"duplicate catalog module id: {module_id}" for module_id in duplicate_ids)
+    known_ids = set(ids)
+    graph: dict[str, list[str]] = {}
+    readme = (ROOT / "README.md").read_text(encoding="utf-8-sig")
+
+    for module in modules:
+        if not isinstance(module, dict) or not isinstance(module.get("id"), str):
+            continue
+        module_id = module["id"]
+        prerequisites = module.get("prerequisites")
+        if not isinstance(prerequisites, list):
+            errors.append(f"catalog module {module_id} prerequisites must be a list")
+            prerequisites = []
+        graph[module_id] = [item for item in prerequisites if isinstance(item, str)]
+        for prerequisite in graph[module_id]:
+            if prerequisite not in known_ids:
+                errors.append(
+                    f"catalog module {module_id} has unknown prerequisite {prerequisite}"
+                )
+            if prerequisite == module_id:
+                errors.append(f"catalog module {module_id} depends on itself")
+
+        page = module.get("page")
+        if isinstance(page, str):
+            resolved = (path.parent / page).resolve()
+            if not resolved.is_file():
+                errors.append(f"catalog module {module_id} page does not exist: {page}")
+            expected_link = f"(docs/curriculum/{page})"
+            if expected_link not in readme:
+                errors.append(f"README does not link catalog module {module_id}: {page}")
+
+    visiting: set[str] = set()
+    visited: set[str] = set()
+
+    def visit(module_id: str) -> None:
+        if module_id in visiting:
+            errors.append(f"curriculum prerequisite cycle includes {module_id}")
+            return
+        if module_id in visited:
+            return
+        visiting.add(module_id)
+        for prerequisite in graph.get(module_id, []):
+            if prerequisite in graph:
+                visit(prerequisite)
+        visiting.remove(module_id)
+        visited.add(module_id)
+
+    for module_id in graph:
+        visit(module_id)
+
+    core_weeks = sum(
+        module.get("duration_weeks", 0)
+        for module in modules
+        if isinstance(module, dict) and module.get("stage") != "elective"
+    )
+    if data.get("core_estimated_weeks") != core_weeks:
+        errors.append(
+            f"catalog core_estimated_weeks is {data.get('core_estimated_weeks')}, "
+            f"expected {core_weeks}"
+        )
+    return errors
+
+
 def main() -> int:
     errors = (
         check_required()
         + check_internal_links()
         + check_ability_model()
         + check_research_sources()
+        + check_curriculum_catalog()
         + check_publication_safety()
     )
     if errors:

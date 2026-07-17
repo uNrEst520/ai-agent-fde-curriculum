@@ -1,166 +1,130 @@
 # 从 AI 使用者到 AI 业务交付者
 
 <p align="center">
-  <img src="assets/readme/ai-agent-fde-hero.png" alt="从 AI 使用者到 AI 业务交付者：AI Agent 与 FDE 课程" width="100%">
+  <img src="assets/readme/ai-agent-fde-hero.png" alt="AI 工程、模型原理与 FDE 业务交付课程" width="100%">
 </p>
 
+一套面向转型者的长期、开放、项目驱动 AI 课程。目标不是记住某个框架，而是形成从计算机基础、模型原理到生产交付的完整能力，并能进入企业现场让 AI 从“能演示”走向“能上岗”。
 
-一套面向非科班转型者、AI Builder、Agent Product Engineer 与 FDE（Forward-Deployed Engineer）的长期开放课程。
+> **What I cannot create, I do not understand.** 课程借鉴 [Build Your Own X](https://github.com/codecrafters-io/build-your-own-x) 的构建式学习与 [OSSU Computer Science](https://github.com/ossu/computer-science) 的先修课程体系：每门课都要回答“我能否解释、亲手构建、测试并交付它”。
 
-这不是一门只持续 12 周的工具速成课。12 周只是共同核心，用来建立工程地图、Agent 原理、评测风控和第一次完整交付。之后继续进入方向专修、前沿论文实验、真实业务项目和周期性能力复评。
+## 课程速览
 
-## 培养目标
+- **完整主线：**约 108 周，建议每周 12-15 小时，适合用约两年系统学习。
+- **灵活选课：**先完成共同基础，再按 AI Builder、模型工程、多模态或研究方向组合课程。
+- **双项目制：**每门课同时包含一个“从零构建”项目和一个“真实交付”任务。
+- **AI 可用但不可绕过理解：**允许 Codex、Claude Code 等工具参与开发，但学习者必须能够解释、调试、评测和承担结果。
+- **持续更新：**稳定原理按年复审，工程实践按季度复审，研究雷达按周收集候选论文。
 
-课程最终训练五种不会因为工具更新而快速过时的能力：
+### 三种学习节奏
 
-1. 发现高价值问题。
-2. 设计人机协作流程。
-3. 验收 AI 输出并控制风险。
-4. 把原型工程化为可运行、可维护、可观测的产品。
-5. 把领域知识与 AI 组合成真实业务结果。
+| 路线 | 每周投入 | 建议周期 | 适合谁 |
+| --- | ---: | ---: | --- |
+| 深度路线 | 12-15 小时 | 约 24-27 个月 | 希望系统转型，并完成 1-2 门选修 |
+| 转岗路线 | 18-20 小时 | 约 16-18 个月 | 优先 AI 应用、Agent、FDE，基础课压缩但不跳过验收 |
+| 在职路线 | 8-10 小时 | 约 30-36 个月 | 边工作边学习，以真实工作项目替代部分练习 |
 
-学习者可以使用 Codex、Claude Code 或其他 AI 编程工具完成大量代码工作，但必须能够解释系统、追踪数据、识别风险、运行验证并对交付结果负责。
+课程时长是建议学习量，不是强制学期。满足先修条件后，部分课程可以并行。
 
-## 课程架构
+> **当前建设状态：**v1.0 已发布完整课程地图、每门课的详细教纲、构建项目和验收要求；逐日讲义、配套视频、测试脚手架与参考实现将按 [ROADMAP](ROADMAP.md) 持续发布。课程详情页现在可以用于制定学习计划，但不代表全部逐日教学包已经完成。
+
+## 完整课程地图
+
+点击课程名称进入详细课程页。每页均包含目标、周计划、学习资源、构建项目、交付物和反 bypass 口试。
+
+### 0. 入学与学习系统
+
+| ID | 课程 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| O00 | [AI 时代的学习操作系统](docs/curriculum/modules/00-learning-operating-system.md) | 个人学习证据库与 AI 使用协议 | 2 | 无 |
+
+### 1. 软件与数据工程基础
+
+| ID | 课程 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| SE01 | [Python 与计算思维](docs/curriculum/modules/01-python-computational-thinking.md) | 命令行数据应用与测试器 | 6 | O00 |
+| SE02 | [Web、API 与数据库](docs/curriculum/modules/02-web-api-databases.md) | 不依赖 Web 框架的 HTTP 服务，再升级为完整 Web 应用 | 6 | SE01 |
+| SE03 | [AI 辅助软件工程](docs/curriculum/modules/03-software-engineering-with-ai.md) | 带测试、CI 和审查记录的可维护服务 | 6 | SE01 |
+| SE04 | [计算机系统与网络](docs/curriculum/modules/04-computer-systems-networks.md) | 进程观察器、缓存与简化网络协议 | 5 | SE01 |
+| DE01 | [面向 AI 的数据工程](docs/curriculum/modules/05-data-engineering.md) | 可追踪、可验证、可重复运行的数据管道 | 5 | SE02, SE03 |
+
+### 2. AI 与模型原理
+
+| ID | 课程 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| AI01 | [AI 数学基础](docs/curriculum/modules/06-math-for-ai.md) | 线性代数、概率与优化可视化实验室 | 8 | SE01 |
+| AI02 | [经典 AI：搜索、规划与知识表示](docs/curriculum/modules/07-classical-ai-search-planning.md) | 路径搜索、约束求解与游戏智能体 | 5 | SE01 |
+| ML01 | [机器学习从零实现](docs/curriculum/modules/08-machine-learning-from-scratch.md) | 回归、决策树、聚类与评测工具箱 | 7 | AI01, DE01 |
+| DL01 | [深度学习与自动微分](docs/curriculum/modules/09-deep-learning-autograd.md) | 标量自动微分引擎、MLP 与训练循环 | 7 | ML01 |
+| LM01 | [Transformer 与语言模型](docs/curriculum/modules/10-transformer-language-model.md) | tokenizer、注意力、微型 Transformer 与训练评测 | 8 | DL01, SE04 |
+
+### 3. AI 应用与 Agent 系统
+
+| ID | 课程 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| AP01 | [模型 API、结构化输出与 AI 体验](docs/curriculum/modules/11-model-api-ai-ux.md) | 无 Agent 框架的模型客户端与任务工作流 | 4 | SE02, ML01 |
+| AP02 | [RAG 与知识工程](docs/curriculum/modules/12-rag-knowledge-engineering.md) | 文本切分、倒排/向量检索、引用与离线评测 | 5 | AP01, DE01 |
+| AP03 | [工具调用、MCP 与权限边界](docs/curriculum/modules/13-tool-use-mcp.md) | 工具协议、MCP 服务端/客户端与威胁模型 | 5 | AP01, SE04 |
+| AG01 | [Agent Runtime：状态、计划、记忆与恢复](docs/curriculum/modules/14-agent-runtime.md) | 自己的 Agent 运行时与轨迹记录器 | 6 | AP02, AP03 |
+| EV01 | [AI 评测、安全与风控](docs/curriculum/modules/15-evaluation-safety-security.md) | 评测框架、故障注入、红队与发布门禁 | 5 | AG01, SE03 |
+
+### 4. 生产系统与 FDE 交付
+
+| ID | 课程 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| PR01 | [生产 AI、LLMOps 与可观测性](docs/curriculum/modules/16-production-ai-llmops.md) | 模型网关、追踪、回归、成本和部署流水线 | 6 | EV01, DE01 |
+| FD01 | [FDE 业务发现、流程重构与 ROI](docs/curriculum/modules/17-fde-discovery-roi.md) | 企业诊断、流程蓝图、试点方案与价值模型 | 4 | AP01 |
+| FD02 | [企业 AI 上岗毕业项目](docs/curriculum/modules/18-enterprise-capstone.md) | 从问题发现到部署、培训、验收与复盘的完整交付 | 8 | PR01, FD01 |
+
+## 兴趣选修
+
+选修课不是装饰。每个方向都要完成一个可运行系统和一份评测报告。
+
+| ID | 方向 | 亲手构建 | 周数 | 先修 |
+| --- | --- | --- | ---: | --- |
+| XCV | [计算机视觉与多模态](docs/curriculum/electives/computer-vision-multimodal.md) | 图像分类器、姿态/视频流水线与多模态评测 | 8 | DL01 |
+| XSP | [语音与音频 AI](docs/curriculum/electives/speech-audio.md) | 声学特征、语音流水线与实时语音助手 | 6 | DL01 |
+| XGM | [生成式媒体与扩散模型](docs/curriculum/electives/generative-media-diffusion.md) | 微型扩散模型与可控生成工作流 | 7 | DL01 |
+| XRL | [强化学习与具身智能基础](docs/curriculum/electives/reinforcement-learning-embodied.md) | Gridworld、Q-learning、DQN 与环境评测 | 8 | ML01, DL01 |
+| XRS | [推荐系统与时间序列](docs/curriculum/electives/recommender-time-series.md) | 召回、排序、回测和线上指标模拟器 | 6 | ML01, DE01 |
+| XLM | [语言模型训练、对齐与系统优化](docs/curriculum/electives/lm-training-alignment.md) | 数据清洗、SFT/偏好优化与性能剖析 | 10 | LM01 |
+| XRE | [AI 研究与论文复现](docs/curriculum/electives/research-reproduction.md) | 一次可重复论文实验和证据报告 | 6 | ML01 |
+| XDS | [领域 AI 工作室](docs/curriculum/electives/domain-ai-studio.md) | 面向真实行业的 AI 产品与交付包 | 8 | EV01, FD01 |
+
+## 按目标选路线
+
+不必每门选修都学。先完成相应先修课，再进入最符合目标的路线：
+
+- [AI Builder / FDE 路线](docs/curriculum/pathways/ai-builder-fde.md)：最快形成 AI 应用、Agent 和企业交付能力。
+- [模型与算法工程路线](docs/curriculum/pathways/model-engineering.md)：强化数学、训练、系统优化与模型评测。
+- [多模态产品路线](docs/curriculum/pathways/multimodal-products.md)：组合视觉、语音、视频和 Agent。
+- [研究工程路线](docs/curriculum/pathways/research-engineering.md)：从论文阅读走向可信复现和工程转化。
+
+## 学习如何被验收
+
+每门课采用同一条证据链：
 
 ```text
-共同核心（12周）
-    ↓
-方向专修（每个模块6-10周）
-    ↓
-前沿研究实验室（持续更新）
-    ↓
-FDE真实业务交付项目（每半年至少一次）
-    ↓
-作品集、求职、接单、企业内部落地或创业验证
+解释原理 → 从零实现最小系统 → 与成熟库对照 → 注入失败 → 自动评测 → 真实用户任务 → 复盘业务结果
 ```
 
-| 层级 | 目的 | 主要产出 |
-| --- | --- | --- |
-| 共同核心 | 从 AI 使用者进入可解释工程状态 | 工程地图、API 实验、Agent Demo、评测集 |
-| 方向专修 | 形成一个可就业或可接单的技术方向 | RAG、Agent 可靠性、MCP、部署或行业方案 |
-| 研究实验室 | 追踪论文、协议和平台变化 | 论文卡片、复现实验、课程变更提案 |
-| FDE 项目 | 让 AI 从“能演示”走向“能上岗” | 诊断、方案、系统、评测、上线与复盘 |
+AI 工具可以写代码，但学习者必须提交：自己的系统图、关键链路解释、测试结果、失败案例、决策记录和口试回答。详细规则见 [学习与反 bypass 契约](docs/curriculum/learning-contract.md) 和 [评测标准](docs/curriculum/assessment.md)。
 
-## 从这里开始
+## 课程维护
 
-- [完整课程地图](docs/curriculum/README.md)
+- [结构化课程目录](docs/curriculum/catalog.json)
+- [课程设计与依赖说明](docs/curriculum/README.md)
 - [能力等级模型](docs/curriculum/competency-framework.md)
-- [12 周共同核心](docs/curriculum/foundation-12-weeks.md)
-- [长期进阶路线](docs/curriculum/lifelong-pathways.md)
-- [学习与反 bypass 契约](docs/curriculum/learning-contract.md)
-- [FDE 毕业项目标准](docs/curriculum/fde-capstone.md)
-- [评测与毕业标准](docs/curriculum/assessment.md)
-- [Week 01：工程地图与反 bypass](docs/course/week-01/README.md)
-
-## 前沿研究与课程治理
-
-- [研究雷达](research/README.md)
-- [核心与前沿阅读清单](research/reading-list.md)
-- [最新论文候选](research/radar/latest.md)
-- [论文如何进入正式课程](docs/governance/research-to-course.md)
-- [课程治理与版本规则](docs/governance/course-governance.md)
-- [课程资料选择标准](docs/governance/source-selection-standard.md)
-- [长期路线图](ROADMAP.md)
-- [参与贡献](CONTRIBUTING.md)
-
-研究雷达每周从 arXiv 等原始来源生成候选清单。自动收录不代表课程推荐；论文需要经过相关性判断、证据审查、最小复现和教学转化，才能进入共同核心或方向专修。
+- [研究雷达](research/README.md)与[最新论文候选](research/radar/latest.md)
+- [论文进入正式课程的规则](docs/governance/research-to-course.md)
 - [公开仓库隐私与发布安全](docs/governance/publication-safety.md)
+- [版本路线图](ROADMAP.md)与[参与贡献](CONTRIBUTING.md)
 
-## 每周学习节奏
-
-工作日每天 2-3 小时，建议每周 10-15 小时：
-
-```text
-20% 原理与官方资料
-25% 阅读和追踪现有项目
-30% 使用 AI 编程工具完成改动
-15% 测试、评测和风险检查
-10% 复盘与业务表达
-```
-
-每周必须留下可检查证据：概念解释、工程链路、代码改动、命令结果、失败案例、评测记录和业务复盘。
+网球、建筑或咨询类项目作为 [领域 AI 工作室](docs/curriculum/electives/domain-ai-studio.md) 的案例，而不是课程本身的先修条件。示例作品见 [项目案例目录](docs/projects/README.md)。
 
 ## 本地验证
 
 ```powershell
 python scripts\validate_curriculum.py
 python -m unittest discover -s tests -v
-```
-
-## 现有作品集与学习记录
-
-以下网球 AI 作品集继续作为课程的第一条真实领域实践线。
-
-### 网球 AI Builder 作品集
-
-这是一个面向创业公司、一人公司和垂直行业 AI 产品岗位的作品集总入口。核心叙事不是“传统程序员求职”，而是展示如何用 AI、Codex、MCP、自动化工作流和领域理解，把网球训练场景做成可试用、可复盘、可迭代的 AI 产品系统。
-
-## 定位
-
-- 求职标题：AI Builder / Agent Product Engineer / AI Application Engineer
-- 主展示项目：`<PROJECT_ROOT>\网球视频识别`
-- 产品主线：比赛复盘发现问题 -> 训练计划生成方案 -> 视频识别验证动作 -> 战术板解释打法
-- 面试表达：我能把 AI、视觉分析、训练知识和产品体验组合成可用工具，而不是只会调 API。
-
-## 项目矩阵
-
-| 项目 | 角色 | 面试价值 |
-| --- | --- | --- |
-| 随身网球教练 MVP | 主入口 | Web + FastAPI + MediaPipe Pose + 报告导出 + 训练处方 |
-| 网球训练计划 | 计划大脑 | 球员画像、训练库、训练闭环、长期成长数据 |
-| 网球记分复盘 | 数据来源 | 计分、技术统计、赛后复盘、比赛问题转训练 |
-| 网球战术板 | 可视化工具 | 站位、跑动、击球线路、战术动画和教练表达 |
-
-## 关键材料
-
-- [作品集首页](index.html)
-- [正式课程 Week 01：工程地图与反 bypass 启动](docs/course/week-01/README.md)
-- [项目一页纸：随身网球教练 MVP](docs/projects/tennis-ai-coach.md)
-- [项目一页纸：网球训练计划](docs/projects/tennis-training-planner.md)
-- [项目一页纸：网球记分复盘](docs/projects/tennis-score-review.md)
-- [项目一页纸：网球战术板](docs/projects/tennis-tactics-board.md)
-- [Agent 流程与主项目架构](docs/agent-flow-and-architecture.md)
-- [3 个月双轨转型计划](docs/combined-3-month-roadmap.md)
-- [Week 1 启动指南](docs/week-01-start-here.md)
-- [Week 1 作业提交模板](docs/course/week-01/homework-template.md)
-- [每周反 bypass 复盘模板](docs/weekly-anti-bypass-template.md)
-- [面试故事与表达](docs/interview-stories.md)
-
-## 3 分钟讲法
-
-我原本是建筑设计师，优势不是传统代码背景，而是能理解复杂业务流程、把模糊需求拆成可执行系统。过去我从 GPT-3.5、ComfyUI、Sora/可灵、N8N/Opal、OpenClaw、Codex 和 MCP 一路实践下来，逐步形成了 AI Builder 工作流。
-
-这个作品集用网球训练做垂直场景：比赛数据发现问题，训练计划安排练习，视频识别验证动作，战术板解释打法。主项目已经能上传动作视频、提取姿态、生成中文报告，并新增 AI 教练训练处方，把视觉证据转成下一组训练建议。
-
-## 学习路线
-
-作品集路线和系统学习路线合并推进：一边用现有网球项目做可展示产品，一边按 [3 个月双轨转型计划](docs/combined-3-month-roadmap.md) 补工程地图、API、数据流、测试、Agent 原理和反 bypass 工作法。
-
-## 验证命令
-
-主项目：
-
-```powershell
-cd "<PROJECT_ROOT>\网球视频识别"
-npm run build
-.\.server-venv\Scripts\python.exe -m pytest -p no:cacheprovider backend\tests
-npm run smoke:ui
-npm run smoke:retake
-```
-
-训练计划：
-
-```powershell
-cd "<PROJECT_ROOT>\网球训练计划"
-node .\scripts\e2e-training-flow-check.js
-node .\scripts\validate-templates.js
-node .\scripts\blueprint-coverage-report.js
-```
-
-记分复盘：
-
-```powershell
-cd "<PROJECT_ROOT>\网球记分复盘"
-npm test
 ```

@@ -1,0 +1,316 @@
+{
+  "schema_version": 1,
+  "program": "从 AI 使用者到 AI 业务交付者",
+  "recommended_hours_per_week": "12-15",
+  "core_estimated_weeks": 108,
+  "modules": [
+    {
+      "id": "O00",
+      "title": "AI 时代的学习操作系统",
+      "stage": "orientation",
+      "duration_weeks": 2,
+      "prerequisites": [],
+      "page": "modules/00-learning-operating-system.md",
+      "build": "个人学习证据库与 AI 使用协议"
+    },
+    {
+      "id": "SE01",
+      "title": "Python 与计算思维",
+      "stage": "engineering",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "O00"
+      ],
+      "page": "modules/01-python-computational-thinking.md",
+      "build": "命令行数据应用与测试器"
+    },
+    {
+      "id": "SE02",
+      "title": "Web、API 与数据库",
+      "stage": "engineering",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "SE01"
+      ],
+      "page": "modules/02-web-api-databases.md",
+      "build": "HTTP 服务与完整 Web 应用"
+    },
+    {
+      "id": "SE03",
+      "title": "AI 辅助软件工程",
+      "stage": "engineering",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "SE01"
+      ],
+      "page": "modules/03-software-engineering-with-ai.md",
+      "build": "带测试、CI 和审查记录的服务"
+    },
+    {
+      "id": "SE04",
+      "title": "计算机系统与网络",
+      "stage": "engineering",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "SE01"
+      ],
+      "page": "modules/04-computer-systems-networks.md",
+      "build": "进程观察器、缓存与简化网络协议"
+    },
+    {
+      "id": "DE01",
+      "title": "面向 AI 的数据工程",
+      "stage": "engineering",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "SE02",
+        "SE03"
+      ],
+      "page": "modules/05-data-engineering.md",
+      "build": "可追踪、可验证的数据管道"
+    },
+    {
+      "id": "AI01",
+      "title": "AI 数学基础",
+      "stage": "model-foundations",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "SE01"
+      ],
+      "page": "modules/06-math-for-ai.md",
+      "build": "数学可视化与优化实验室"
+    },
+    {
+      "id": "AI02",
+      "title": "经典 AI：搜索、规划与知识表示",
+      "stage": "model-foundations",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "SE01"
+      ],
+      "page": "modules/07-classical-ai-search-planning.md",
+      "build": "搜索、约束求解与游戏智能体"
+    },
+    {
+      "id": "ML01",
+      "title": "机器学习从零实现",
+      "stage": "model-foundations",
+      "duration_weeks": 7,
+      "prerequisites": [
+        "AI01",
+        "DE01"
+      ],
+      "page": "modules/08-machine-learning-from-scratch.md",
+      "build": "经典机器学习与评测工具箱"
+    },
+    {
+      "id": "DL01",
+      "title": "深度学习与自动微分",
+      "stage": "model-foundations",
+      "duration_weeks": 7,
+      "prerequisites": [
+        "ML01"
+      ],
+      "page": "modules/09-deep-learning-autograd.md",
+      "build": "自动微分引擎、MLP 与训练循环"
+    },
+    {
+      "id": "LM01",
+      "title": "Transformer 与语言模型",
+      "stage": "model-foundations",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "DL01",
+        "SE04"
+      ],
+      "page": "modules/10-transformer-language-model.md",
+      "build": "tokenizer、微型 Transformer 与评测"
+    },
+    {
+      "id": "AP01",
+      "title": "模型 API、结构化输出与 AI 体验",
+      "stage": "applications",
+      "duration_weeks": 4,
+      "prerequisites": [
+        "SE02",
+        "ML01"
+      ],
+      "page": "modules/11-model-api-ai-ux.md",
+      "build": "模型客户端与任务工作流"
+    },
+    {
+      "id": "AP02",
+      "title": "RAG 与知识工程",
+      "stage": "applications",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "AP01",
+        "DE01"
+      ],
+      "page": "modules/12-rag-knowledge-engineering.md",
+      "build": "检索、引用和离线评测系统"
+    },
+    {
+      "id": "AP03",
+      "title": "工具调用、MCP 与权限边界",
+      "stage": "applications",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "AP01",
+        "SE04"
+      ],
+      "page": "modules/13-tool-use-mcp.md",
+      "build": "工具协议、MCP 服务与威胁模型"
+    },
+    {
+      "id": "AG01",
+      "title": "Agent Runtime：状态、计划、记忆与恢复",
+      "stage": "applications",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "AP02",
+        "AP03"
+      ],
+      "page": "modules/14-agent-runtime.md",
+      "build": "Agent 运行时与轨迹记录器"
+    },
+    {
+      "id": "EV01",
+      "title": "AI 评测、安全与风控",
+      "stage": "applications",
+      "duration_weeks": 5,
+      "prerequisites": [
+        "AG01",
+        "SE03"
+      ],
+      "page": "modules/15-evaluation-safety-security.md",
+      "build": "评测、故障注入、红队和发布门禁"
+    },
+    {
+      "id": "PR01",
+      "title": "生产 AI、LLMOps 与可观测性",
+      "stage": "production-fde",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "EV01",
+        "DE01"
+      ],
+      "page": "modules/16-production-ai-llmops.md",
+      "build": "模型网关、追踪与部署流水线"
+    },
+    {
+      "id": "FD01",
+      "title": "FDE 业务发现、流程重构与 ROI",
+      "stage": "production-fde",
+      "duration_weeks": 4,
+      "prerequisites": [
+        "AP01"
+      ],
+      "page": "modules/17-fde-discovery-roi.md",
+      "build": "企业诊断、流程蓝图与试点方案"
+    },
+    {
+      "id": "FD02",
+      "title": "企业 AI 上岗毕业项目",
+      "stage": "production-fde",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "PR01",
+        "FD01"
+      ],
+      "page": "modules/18-enterprise-capstone.md",
+      "build": "部署、培训、验收与价值复盘"
+    },
+    {
+      "id": "XCV",
+      "title": "计算机视觉与多模态",
+      "stage": "elective",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "DL01"
+      ],
+      "page": "electives/computer-vision-multimodal.md",
+      "build": "视觉、姿态、视频与多模态评测系统"
+    },
+    {
+      "id": "XSP",
+      "title": "语音与音频 AI",
+      "stage": "elective",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "DL01"
+      ],
+      "page": "electives/speech-audio.md",
+      "build": "语音流水线与实时语音助手"
+    },
+    {
+      "id": "XGM",
+      "title": "生成式媒体与扩散模型",
+      "stage": "elective",
+      "duration_weeks": 7,
+      "prerequisites": [
+        "DL01"
+      ],
+      "page": "electives/generative-media-diffusion.md",
+      "build": "微型扩散模型与可控生成工作流"
+    },
+    {
+      "id": "XRL",
+      "title": "强化学习与具身智能基础",
+      "stage": "elective",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "ML01",
+        "DL01"
+      ],
+      "page": "electives/reinforcement-learning-embodied.md",
+      "build": "Gridworld、DQN 与环境评测"
+    },
+    {
+      "id": "XRS",
+      "title": "推荐系统与时间序列",
+      "stage": "elective",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "ML01",
+        "DE01"
+      ],
+      "page": "electives/recommender-time-series.md",
+      "build": "召回、排序、回测与指标模拟器"
+    },
+    {
+      "id": "XLM",
+      "title": "语言模型训练、对齐与系统优化",
+      "stage": "elective",
+      "duration_weeks": 10,
+      "prerequisites": [
+        "LM01"
+      ],
+      "page": "electives/lm-training-alignment.md",
+      "build": "数据清洗、SFT、偏好优化与性能剖析"
+    },
+    {
+      "id": "XRE",
+      "title": "AI 研究与论文复现",
+      "stage": "elective",
+      "duration_weeks": 6,
+      "prerequisites": [
+        "ML01"
+      ],
+      "page": "electives/research-reproduction.md",
+      "build": "可重复论文实验与证据报告"
+    },
+    {
+      "id": "XDS",
+      "title": "领域 AI 工作室",
+      "stage": "elective",
+      "duration_weeks": 8,
+      "prerequisites": [
+        "EV01",
+        "FD01"
+      ],
+      "page": "electives/domain-ai-studio.md",
+      "build": "行业 AI 产品与完整交付包"
+    }
+  ]
+}
