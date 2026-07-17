@@ -65,6 +65,43 @@ class LearningResourceCatalogTests(unittest.TestCase):
             with self.subTest(module=module):
                 self.assertTrue(resources)
 
+    def test_se01_trains_ai_assisted_code_review_not_blank_page_coding(self):
+        module = (
+            ROOT
+            / "docs"
+            / "curriculum"
+            / "modules"
+            / "01-python-computational-thinking.md"
+        ).read_text(encoding="utf-8-sig")
+        build = (ROOT / "docs" / "builds" / "cli-data-app.md").read_text(
+            encoding="utf-8-sig"
+        )
+
+        for required in (
+            "不要求从空白文件手写完整应用",
+            "预测行为、作出判断、验收结果",
+            "逻辑错误",
+            "Codex 补丁",
+        ):
+            with self.subTest(required=required):
+                self.assertIn(required, module)
+
+        self.assertIn("代码审阅与逻辑验证档案", build)
+        self.assertIn("三类必做逻辑故障", build)
+        self.assertNotIn("至少 30 个", module)
+        self.assertNotIn("从空目录或最小脚手架开始", build)
+
+    def test_se01_official_agent_python_references_are_cataloged(self):
+        by_id = {resource["id"]: resource for resource in self.resources}
+        for resource_id in (
+            "PYDANTIC-MODELS",
+            "PYTHON-ASYNCIO-TASKS",
+            "MS-LANGCHAIN-BEGINNERS",
+        ):
+            with self.subTest(resource_id=resource_id):
+                self.assertIn(resource_id, by_id)
+                self.assertIn("SE01-W5", by_id[resource_id]["used_in"])
+
 
 if __name__ == "__main__":
     unittest.main()

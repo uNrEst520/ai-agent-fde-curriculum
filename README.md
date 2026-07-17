@@ -26,14 +26,14 @@
 
 课程时长是建议学习量，不是强制学期。满足先修条件后，部分课程可以并行。
 
-> **当前建设状态：**完整两年地图仍用于说明长期方向，但不再把“有课程页”表述为“已完成精选教学”。v1.2 先精修第一阶段：O00、SE01 与 Week 01 已经明确到外部课程章节、必做作业、预计时间、跳过项和迁移任务；其余课程目前仍是教纲，将在前一批实际学习和批改后逐批升级。
+> **当前建设状态：**完整两年地图仍用于说明长期方向，但不再把“有课程页”表述为“已完成精选教学”。v1.2 先精修第一阶段：O00、SE01 与 Week 01 已经明确到外部课程章节、必学范围、预计时间、跳过项和实践任务；其余课程目前仍是教纲，将在前一批实际学习和批改后逐批升级。
 
 ### 当前可直接开学
 
 | 顺序 | 正式课程 | 主学习资源 | 交付结果 |
 | --- | --- | --- | --- |
 | 1 | [O00 · AI 时代的学习操作系统](docs/curriculum/modules/00-learning-operating-system.md) | Coursera Learning How to Learn 精选模块 + [Week 01 实训](docs/course/week-01/README.md) | 学习协议、项目地图、故障与测试记录 |
-| 2 | [SE01 · Python 与计算思维](docs/curriculum/modules/01-python-computational-thinking.md) | Harvard CS50P 精确到 Week 与 Problem Set 的六周路径 | 命令行数据应用、30 个测试、5 分钟演示 |
+| 2 | [SE01 · Python 代码阅读与 AI 辅助工程](docs/curriculum/modules/01-python-computational-thinking.md) | Harvard CS50P 精选讲座 + 真实项目代码审阅 | 代码地图、逻辑故障记录、Codex 补丁评审 |
 
 课程如何筛选、何时替换见[精选学习资源规则](docs/resources/README.md)；未来 AI 与工程课程候选见[教育资源观察库](research/education-source-watchlist.md)。
 
@@ -72,7 +72,7 @@ flowchart LR
 
 | ID | 课程 | 亲手构建 | 周数 | 先修 |
 | --- | --- | --- | ---: | --- |
-| SE01 | [Python 与计算思维](docs/curriculum/modules/01-python-computational-thinking.md) | 命令行数据应用与测试器 | 6 | O00 |
+| SE01 | [Python 代码阅读与 AI 辅助工程](docs/curriculum/modules/01-python-computational-thinking.md) | Python 代码审阅与逻辑验证实验 | 6 | O00 |
 | SE02 | [Web、API 与数据库](docs/curriculum/modules/02-web-api-databases.md) | 不依赖 Web 框架的 HTTP 服务，再升级为完整 Web 应用 | 6 | SE01 |
 | SE03 | [AI 辅助软件工程](docs/curriculum/modules/03-software-engineering-with-ai.md) | 带测试、CI 和审查记录的可维护服务 | 6 | SE01 |
 | SE04 | [计算机系统与网络](docs/curriculum/modules/04-computer-systems-networks.md) | 进程观察器、缓存与简化网络协议 | 5 | SE01 |
@@ -142,7 +142,7 @@ flowchart LR
 
 | 构建项目 | 你会亲手实现 | 对应课程 |
 | --- | --- | --- |
-| [命令行数据应用](docs/builds/cli-data-app.md) | 解析、数据模型、查询、测试和打包 | SE01 |
+| [Python 代码审阅与逻辑验证实验](docs/builds/cli-data-app.md) | 调用追踪、逻辑故障、测试合同与 AI 补丁评审 | SE01 |
 | [HTTP 与完整 Web 服务](docs/builds/http-web-service.md) | 原始 HTTP、路由、SQL、前端和 FastAPI 对照 | SE02 |
 | [可复现数据管道](docs/builds/reproducible-data-pipeline.md) | 数据契约、质量、增量、血缘和恢复 | DE01 |
 | [搜索、约束与规划引擎](docs/builds/search-planning-engine.md) | BFS、A*、CSP、minimax | AI02 |

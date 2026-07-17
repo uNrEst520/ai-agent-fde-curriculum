@@ -13,9 +13,9 @@
     {
       "id": "B01",
       "module": "SE01",
-      "title": "命令行数据应用",
+      "title": "Python 代码审阅与逻辑验证实验",
       "page": "cli-data-app.md",
-      "estimated_hours": "35-50",
+      "estimated_hours": "25-35",
       "level": "入门"
     },
     {

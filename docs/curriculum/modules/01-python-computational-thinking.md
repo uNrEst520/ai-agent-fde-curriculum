@@ -1,88 +1,132 @@
-# SE01 · Python 与计算思维
+# SE01 · Python 代码阅读与 AI 辅助工程
 
-- **建议时长：**6 周 · 每周 12-15 小时
+- **建议时长：**6 周 · 每周 8-10 小时
 - **先修课程：**O00
 - **课程性质：**主线课
-- **验收方式：**CS50P 精选作业 + 构建项目 + 口试
+- **验收方式：**代码阅读记录 + 逻辑故障实验 + Codex 补丁评审 + 口试
 
-## 为什么学
+## 课程定位
 
-Python 是 AI 工程最常见的胶水语言。重点不是背语法，而是学会把模糊任务拆成数据、状态、函数、边界和测试。
+这不是一门要求你从空白文件手写 Python 应用的传统编程课。目标是让你在 AI 可以生成大部分代码的环境中，仍然能够读懂关键路径、发现逻辑错误、判断修改风险，并用测试和业务证据验收结果。
+
+课程保留必要的 Python 概念，但不要求背诵语法、刷算法题、默写库函数或独立完成大型程序。你可以让 Codex 生成代码，但不能把“代码能运行”当成“业务正确”。
 
 ## 学习目标
 
-- 阅读并追踪中小型 Python 程序
-- 使用数据结构、函数、模块、异常和类型表达问题
-- 独立定位输入、状态和边界条件导致的错误
-- 能向 Codex 描述改动，并用测试而不是“看起来能跑”完成验收
+完成课程后，你应当能够：
+
+- 看到 Python 项目时，找到入口、核心模块、数据模型、外部依赖和测试
+- 沿着函数调用追踪一次请求，解释输入如何变成输出
+- 阅读 if、for、try/except、class、async/await 和类型标注
+- 区分语法错误、运行错误、逻辑错误、需求错误和数据错误
+- 把业务规则写成决策表、示例和可验收的测试
+- 发现状态覆盖、边界遗漏、重复副作用、权限过大等 Agent 常见风险
+- 审查 Codex 生成的修改，预测影响范围并选择合适的验证方法
+- 用自己的语言向同事、面试官或客户解释系统为什么可信
+
+## 不要求掌握
+
+- 不要求从空白文件手写完整应用
+- 不要求背诵 Python 语法和标准库 API
+- 不要求刷 LeetCode 或学习复杂算法
+- 不要求脱离 AI 完成大段代码
+- 不要求把 CS50P Problem Sets 全部做完
+- 不要求成为 Python 底层或框架专家
+
+但你必须亲自完成三件事：**预测行为、作出判断、验收结果**。
 
 ## 主课与使用方式
 
-**主课：**Harvard CS50P [CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/)。
+**主课：**Harvard CS50P [CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/) 的精选讲座、讲义与示例代码。
 
-CS50P 提供完整讲座、讲义、字幕、源代码和 Problem Sets。本课程不要求按原课十周全部完成，而是把最相关内容压缩成六周；每周只做下表列出的精选作业，再把知识迁移到自己的命令行数据应用。
+观看时不要追求记住所有语法。每学一个概念，都回答四个问题：
+
+1. 这段代码接收什么输入？
+2. 哪个分支或状态决定了结果？
+3. 它会修改文件、数据库或外部系统吗？
+4. 什么证据能证明结果符合业务要求？
+
+Python 官方文档只在遇到概念时查阅，不从头通读。
 
 ## 周计划
 
-| 周 | 必学内容 | 精选外部作业 | 本课程迁移任务 | 建议用时 |
-| --- | --- | --- | --- | ---: |
-| 1 | [Week 0: Functions, Variables](https://cs50.harvard.edu/python/weeks/0/) | [Einstein](https://cs50.harvard.edu/python/psets/0/einstein/)、[Tip Calculator](https://cs50.harvard.edu/python/psets/0/tip/) | 实现单位转换器；闭卷解释参数、返回值、作用域 | 12-14 小时 |
-| 2 | [Week 1: Conditionals](https://cs50.harvard.edu/python/weeks/1/) + [Week 2: Loops](https://cs50.harvard.edu/python/weeks/2/) | [Meal Time](https://cs50.harvard.edu/python/psets/1/meal/)、[twttr](https://cs50.harvard.edu/python/psets/2/twttr/)、[Vanity Plates](https://cs50.harvard.edu/python/psets/2/plates/) | 把网球训练规则写成分支/循环规则引擎 | 13-15 小时 |
-| 3 | [Week 3: Exceptions](https://cs50.harvard.edu/python/weeks/3/) + [Week 4: Libraries](https://cs50.harvard.edu/python/weeks/4/) | [Fuel Gauge](https://cs50.harvard.edu/python/psets/3/fuel/)、[Outdated](https://cs50.harvard.edu/python/psets/3/outdated/)、[Little Professor](https://cs50.harvard.edu/python/psets/4/professor/) | 为错误输入设计提示、重试和日志；记录三类失败 | 13-15 小时 |
-| 4 | [Week 5: Unit Tests](https://cs50.harvard.edu/python/weeks/5/) + pytest [Get Started](https://docs.pytest.org/en/stable/getting-started.html) | [Testing my twttr](https://cs50.harvard.edu/python/psets/5/test_twttr/)、[Refueling](https://cs50.harvard.edu/python/psets/5/test_fuel/) | 给 CLI 项目写至少 20 个测试，覆盖正常、边界和失败输入 | 12-14 小时 |
-| 5 | [Week 6: File I/O](https://cs50.harvard.edu/python/weeks/6/) + [Week 8: OOP](https://cs50.harvard.edu/python/weeks/8/) | [Scourgify](https://cs50.harvard.edu/python/psets/6/scourgify/)、[Cookie Jar](https://cs50.harvard.edu/python/psets/8/jar/) | 读取 CSV/JSON，拆分模块，用类建模一个任务队列 | 13-15 小时 |
-| 6 | [Week 9: Et Cetera](https://cs50.harvard.edu/python/weeks/9/) 的类型提示、文档字符串与打包部分 | 不另做 CS50P Final Project | 完成[命令行数据应用](../../builds/cli-data-app.md)，补到 30 个测试并做 5 分钟演示 | 12-15 小时 |
+| 周 | 核心问题 | 精选学习内容 | 实践任务 | 必交成果 | 建议用时 |
+| --- | --- | --- | --- | --- | ---: |
+| 1 | 函数如何把页面操作变成程序行为？ | [CS50P Week 0](https://cs50.harvard.edu/python/weeks/0/) 的 lecture、notes 与 source code | 从真实项目选择 3 个函数，标注参数、返回值、调用者和副作用；预测 5 组输入结果后再运行 | 函数阅读卡 + 一张调用关系图 | 8 小时 |
+| 2 | 条件、循环和数据结构如何表达业务规则？ | [Week 1: Conditionals](https://cs50.harvard.edu/python/weeks/1/)、[Week 2: Loops](https://cs50.harvard.edu/python/weeks/2/) 与 [Data Structures](https://docs.python.org/3/tutorial/datastructures.html) 精选章节 | 把网球计分或训练推荐规则写成决策表；找出 3 个边界条件和 2 个反例 | 业务决策表 + 执行轨迹表 | 8-10 小时 |
+| 3 | 数据、异常和副作用在哪里越过系统边界？ | [Week 3: Exceptions](https://cs50.harvard.edu/python/weeks/3/)、[Week 4: Libraries](https://cs50.harvard.edu/python/weeks/4/)、[Week 6: File I/O](https://cs50.harvard.edu/python/weeks/6/) 精选内容 | 追踪一次文件或 API 数据处理；标出验证、转换、异常捕获、日志和外部写入位置 | 数据流图 + 失败路径清单 | 8-10 小时 |
+| 4 | 测试如何成为业务合同？ | [CS50P Week 5](https://cs50.harvard.edu/python/weeks/5/) lecture、notes 与 pytest [Get Started](https://docs.pytest.org/en/stable/getting-started.html) | 阅读现有测试并翻译成 Given/When/Then；让 Codex 注入 3 个逻辑错误，观察哪些测试能发现、哪些不能 | 测试合同表 + 逻辑故障实验记录 | 9-10 小时 |
+| 5 | Agent 项目中的 Python 模式如何阅读？ | [CS50P Week 8](https://cs50.harvard.edu/python/weeks/8/) 精选内容、[Pydantic Models](https://docs.pydantic.dev/latest/concepts/models/)、[Coroutines and Tasks](https://docs.python.org/3/library/asyncio-task.html) 入门部分；选读 [Microsoft LangChain for Beginners](https://github.com/microsoft/langchain-for-beginners) Chapters 2-4 的代码 | 阅读一个工具定义、一个状态模型和一条异步调用链；检查 schema、默认值、状态更新、重试和副作用 | Agent 代码注释稿 + 风险清单 | 9-10 小时 |
+| 6 | 如何审查 AI 完成的一次真实修改？ | [CS50P Week 9](https://cs50.harvard.edu/python/weeks/9/) 的 type hints 与 docstrings；回看前五周材料 | 在现有项目完成一次“提出修改 → Codex 实现 → 人工审查 → 测试验证 → 风险说明”闭环 | [Python 代码审阅与逻辑验证实验](../../builds/cli-data-app.md) | 10 小时 |
 
-## 明确跳过什么
+## 每周固定课堂流程
 
-- Week 7 Regular Expressions 暂不作为必修；在后续文本处理或日志解析需要时再回看。
-- 每个 Problem Set 中未列出的题目均为选做，不为“刷完课程”牺牲迁移项目。
-- Python 官方教程不是第二门主课，不从头通读。遇到概念不清时只查：
-  - [More Control Flow Tools](https://docs.python.org/3/tutorial/controlflow.html)
-  - [Data Structures](https://docs.python.org/3/tutorial/datastructures.html)
-  - [Errors and Exceptions](https://docs.python.org/3/tutorial/errors.html)
-  - [Classes](https://docs.python.org/3/tutorial/classes.html)
+1. **概念输入，90-120 分钟：**观看指定讲座或阅读指定章节，只做概念卡片。
+2. **代码走读，120 分钟：**在真实项目中找到同类代码，逐行解释关键路径。
+3. **行为预测，60 分钟：**运行前先写下输入、路径、输出和可能副作用。
+4. **故障实验，120 分钟：**让 AI 制造或修复一个逻辑问题，比较预测与真实结果。
+5. **证据整理，60 分钟：**提交图、表、测试结果和自己的判断。
+6. **口头复盘，30 分钟：**不看 AI，回答本周反 bypass 问题。
 
-## 为什么选 CS50P
+## 五类错误
 
-- Harvard 提供免费、稳定、可直接定位到周和题目的公开内容。
-- 每个概念后都有可自动检查的作业，适合防止“只看视频、没有写过”。
-- 课程使用 Python 标准能力，不会过早把理解藏在 AI 框架后面。
-- 现成 Problem Sets 负责基础训练，本仓库项目负责迁移到 AI/FDE 真实场景。
+| 类型 | 典型现象 | 本课判断方式 |
+| --- | --- | --- |
+| 语法错误 | 程序无法解析 | 交给解释器、IDE 或 AI 定位 |
+| 运行错误 | 文件不存在、类型不匹配、网络失败 | 阅读错误信息和调用栈 |
+| 逻辑错误 | 能运行，但分支、计算或状态更新不符合规则 | 决策表、反例和测试 |
+| 需求错误 | 实现与真正的用户目标不一致 | 用户流程和验收标准 |
+| 数据/风控错误 | 数据越权、污染、重复写入或不可追溯 | 权限、来源、日志和人工审批 |
+
+课程把主要精力放在后三类，因为它们最难仅靠 AI 自动发现。
 
 ## AI 使用边界
 
-| 环节 | 可以使用 Codex | 必须亲自完成 |
+| 环节 | 可以让 Codex 完成 | 学员必须完成 |
 | --- | --- | --- |
-| 听课与笔记 | 解释陌生概念、生成反例 | 闭卷写概念卡，自己预测代码输出 |
-| 外部作业 | 解释报错、提示测试思路 | 第一版方案和核心函数；遵守 CS50 的 Academic Honesty 规则 |
-| 迁移项目 | 讨论架构、审查代码、补测试建议 | 逐文件解释、主动注入失败、验收结果 |
-| 口试 | 用 AI 模拟提问 | 关闭 AI 后回答并现场修改 |
+| 概念理解 | 解释术语、生成小例子、比较两种写法 | 用自己的话解释，并指出例子在项目中的对应位置 |
+| 代码阅读 | 总结文件、生成调用图草稿、解释陌生语法 | 核对入口、数据流、分支、状态和副作用 |
+| 修改实现 | 生成补丁、补充类型、添加日志和测试 | 先写验收标准，逐项审查修改，决定接受或拒绝 |
+| 故障定位 | 提出假设、搜索相关代码、建议实验 | 选择证据、运行实验、判断根因 |
+| 课程口试 | 模拟面试官提问 | 关闭 AI 后完成解释和现场判断 |
 
 ## 从零构建
 
 [进入逐步构建指南](../../builds/cli-data-app.md)
 
-只使用标准库构建一个命令行数据应用，并亲手写一个最小断言测试器。
+这里的“构建”不是从空目录写程序，而是从零建立一套**代码审阅与逻辑验证方法**。最终产物是一份可展示的 Python 项目审计档案。
 
 ## 真实交付
 
-把应用升级为有配置、日志、错误提示、自动测试和使用说明的可交付工具。
+选择一个已有 Python 项目，完成一条真实用户流程的代码地图、业务合同、风险清单、逻辑故障实验和 AI 补丁评审。优先使用自己的垂直项目，因为你能用领域知识判断“结果是否真的有用”。
 
 ## 必交证据
 
-- 精选 CS50P 作业的完成记录，不提交或公开课程答案
-- 至少 30 个自己能解释的自动测试
-- 三类失败输入和修复记录
-- 闭卷重写一个核心模块
-- 一段 5 分钟演示：业务问题、输入输出、错误边界、验证证据
+- 一张入口、模块、函数、数据和外部系统组成的代码地图
+- 至少 5 条输入到输出的执行轨迹，其中包含边界和失败路径
+- 一张把业务规则翻译成 Given/When/Then 的测试合同表
+- 3 个逻辑故障的预测、注入、测试和修复记录
+- 一次 Codex 补丁逐项评审：接受项、拒绝项、验证证据与残余风险
+- 一段 8-10 分钟演示：业务问题、代码路径、逻辑风险、验证结论
+- 一次关闭 AI 的口试，不要求默写代码
 
 ## 反 bypass 口试
 
-1. 列表、集合和字典的选择会如何影响行为与性能？
-2. 异常应在哪里捕获，为什么？
-3. 如何证明一个重构没有改变外部行为？
-4. 给你一个失败测试时，如何区分测试错了、实现错了还是需求不清？
+1. 这次用户操作从哪里进入后端，经过哪些函数，最后改变了什么？
+2. 哪个条件分支最可能造成“程序能运行但业务结果错误”？
+3. 某个测试通过能证明什么，不能证明什么？
+4. Codex 修改了一个共享数据模型，哪些页面、接口或测试可能受影响？
+5. 重试为什么可能造成重复写入或重复调用付费服务？如何验证？
+6. 你凭什么接受这次 AI 修改？仍有哪些风险没有被覆盖？
+
+## 通过标准
+
+- 能解释，不要求默写
+- 能预测，不只会运行
+- 能找逻辑错误，不只会贴报错
+- 能审查 AI 修改，不直接接受生成结果
+- 能用测试、日志和业务样例形成证据链
+- 能明确说出“不确定在哪里、下一步如何验证”
 
 ## 资源状态
 

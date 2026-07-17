@@ -18,14 +18,14 @@
                     },
                     {
                         "id":  "SE01",
-                        "title":  "Python 与计算思维",
+                        "title":  "Python 代码阅读与 AI 辅助工程",
                         "stage":  "engineering",
                         "duration_weeks":  6,
                         "prerequisites":  [
                                               "O00"
                                           ],
                         "page":  "modules/01-python-computational-thinking.md",
-                        "build":  "命令行数据应用与测试器",
+                        "build":  "Python 代码审阅与逻辑验证实验",
                         "build_page":  "../builds/cli-data-app.md"
                     },
                     {

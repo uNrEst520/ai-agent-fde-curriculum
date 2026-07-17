@@ -2,7 +2,7 @@
 
 > 我无法创造的东西，我就无法理解。
 
-这里不是成品代码合集，而是一条从空目录开始的 AI 系统构建阶梯。每个项目都把复杂系统拆成 6-8 个连续关卡；每一关必须完成构建、验证和解释，才进入下一关。
+这里不是成品代码合集，而是一组逐步理解 AI 系统的构建实验。多数项目从空目录开始；B01 从已有 Python 项目开始，训练代码审阅与逻辑验证。每个项目都拆成 6-8 个连续关卡，每一关必须完成预测、验证和解释，才进入下一关。
 
 ## 使用方法
 
@@ -18,7 +18,7 @@
 | ID | 构建项目 | 对应课程 | 小时 | 难度 |
 | --- | --- | --- | ---: | --- |
 | B00 | [个人学习操作系统](personal-learning-os.md) | [O00](../curriculum/modules/00-learning-operating-system.md) | 12-20 | 入门 |
-| B01 | [命令行数据应用](cli-data-app.md) | [SE01](../curriculum/modules/01-python-computational-thinking.md) | 35-50 | 入门 |
+| B01 | [Python 代码审阅与逻辑验证实验](cli-data-app.md) | [SE01](../curriculum/modules/01-python-computational-thinking.md) | 25-35 | 入门 |
 | B02 | [HTTP 与完整 Web 服务](http-web-service.md) | [SE02](../curriculum/modules/02-web-api-databases.md) | 45-65 | 基础 |
 | B03 | [AI 辅助工程流水线](ai-engineering-pipeline.md) | [SE03](../curriculum/modules/03-software-engineering-with-ai.md) | 35-55 | 基础 |
 | B04 | [进程、网络与缓存实验室](systems-network-lab.md) | [SE04](../curriculum/modules/04-computer-systems-networks.md) | 35-50 | 基础 |
