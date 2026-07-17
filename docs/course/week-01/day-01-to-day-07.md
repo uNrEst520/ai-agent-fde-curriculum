@@ -12,12 +12,11 @@
 
 ### 课前教程
 
-- YouTube 搜索：`PowerShell basics for beginners`
-  - https://www.youtube.com/results?search_query=PowerShell+basics+for+beginners
-- 官方文档：Microsoft Learn PowerShell 入门
-  - https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started
+- **必学，35 分钟：**Microsoft Learn [PowerShell 101 · Chapter 1](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/01-getting-started)
+  - 只读 `What is PowerShell?`、`How to launch PowerShell`、`Execution policy` 和结尾 Review。
+  - 学完要能解释：Shell、普通/管理员权限、执行策略分别是什么。
 
-你不需要看完全部。今天只理解三个概念：命令、参数、路径。
+今天不看随机搜索结果，也不要求学脚本语法。只理解命令、参数、路径和“为什么这个脚本能被执行”。
 
 ### 实操任务
 
@@ -88,12 +87,11 @@ npm run build
 
 ### 课前教程
 
-- YouTube 搜索：`PowerShell files folders commands tutorial`
-  - https://www.youtube.com/results?search_query=PowerShell+files+folders+commands+tutorial
-- GitHub 示例：PowerShell 官方仓库
-  - https://github.com/PowerShell/PowerShell
-
-GitHub 仓库今天不用看源码，只观察它的结构：README、docs、src、tests、scripts。
+- **必学，35 分钟：**Microsoft Learn [PowerShell 101 · Chapter 2: The Help System](https://learn.microsoft.com/en-us/powershell/scripting/learn/ps101/02-help-system)
+  - 只练 `Get-Help`、`Get-Command`、`Get-Member`；其余部分略读。
+- **选学，40 分钟：**MIT [The Missing Semester · Course Overview + The Shell](https://missing.csail.mit.edu/2020/course-shell/)
+  - 只看 navigating in the shell、connecting programs 两部分。
+  - 课程使用 Bash，重点比较“路径、当前目录、命令+参数”的共同模型，不照抄 Bash 命令到 PowerShell。
 
 ### 实操任务
 
@@ -167,10 +165,11 @@ package.json      前端命令入口
 
 ### 课前教程
 
-- GitHub Docs：Hello World
-  - https://docs.github.com/en/get-started/start-your-journey/hello-world
-- YouTube 搜索：`Git and GitHub for beginners freeCodeCamp`
-  - https://www.youtube.com/results?search_query=Git+and+GitHub+for+beginners+freeCodeCamp
+- **必学并完成，45-60 分钟：**GitHub Skills [Introduction to GitHub](https://github.com/skills/introduction-to-github)
+  - 在自己的账号复制练习仓库，依次完成 branch、commit、pull request、merge。
+  - 不只阅读 README；出现自动反馈才算完成。
+- **查漏，20 分钟：**GitHub Docs [Hello World](https://docs.github.com/en/get-started/start-your-journey/hello-world)
+  - 只复习 repository、branch、commit、pull request 四个词。
 
 ### 实操任务
 
@@ -225,12 +224,12 @@ README 是你的销售页，也是你的交付说明书
 
 ### 课前教程
 
-- React 官方学习入口
-  - https://react.dev/learn
-- MDN：Using the Fetch API
-  - https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-- YouTube 搜索：`JavaScript fetch API tutorial beginner`
-  - https://www.youtube.com/results?search_query=JavaScript+fetch+API+tutorial+beginner
+- **必学，45 分钟：**React [Quick Start](https://react.dev/learn)
+  - 只读 creating/nesting components、displaying data、responding to events、updating the screen。
+  - 暂时跳过列表渲染、组件间共享数据和后续完整教程。
+- **必学，30 分钟：**MDN [Using the Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+  - 只读 making a request、setting a body、checking response status、reading JSON。
+  - 学完后回到项目里给一次 `fetch` 标出 URL、method、body、response 四部分。
 
 ### 实操任务
 
@@ -294,12 +293,10 @@ TrainingPlan
 
 ### 课前教程
 
-- FastAPI 官方教程：First Steps
-  - https://fastapi.tiangolo.com/tutorial/first-steps/
-- FastAPI GitHub 仓库
-  - https://github.com/fastapi/fastapi
-- YouTube 搜索：`FastAPI tutorial for beginners`
-  - https://www.youtube.com/results?search_query=FastAPI+tutorial+for+beginners
+- **必学，45 分钟：**FastAPI [First Steps](https://fastapi.tiangolo.com/tutorial/first-steps/)
+  - 跟着实现最小接口，重点理解 path operation、装饰器、返回 JSON。
+  - 必须打开页面中的 `/docs` 示例，观察 Swagger UI 如何由 OpenAPI 自动生成。
+- **项目对照，15 分钟：**打开当前项目自己的 `/docs`，只找本日列出的四个接口并展开请求/响应 schema。
 
 ### 实操任务
 
@@ -355,12 +352,10 @@ API 是产品能力的边界
 
 ### 课前教程
 
-- pytest 官方文档
-  - https://docs.pytest.org/en/stable/
-- pytest GitHub 仓库
-  - https://github.com/pytest-dev/pytest
-- YouTube 搜索：`pytest tutorial for beginners`
-  - https://www.youtube.com/results?search_query=pytest+tutorial+for+beginners
+- **必学并动手，40 分钟：**pytest [Get Started](https://docs.pytest.org/en/stable/getting-started.html)
+  - 完成 create your first test、run multiple tests、assert an exception 三部分。
+  - 故意保留一次失败，先预测错误信息，再运行并核对。
+- **项目对照，20 分钟：**阅读当前项目两个指定测试，写出每个测试的输入、动作和断言。
 
 ### 实操任务
 
@@ -429,12 +424,12 @@ AI 可以替你写代码
 
 ### 课前教程
 
-- OpenAI Agents SDK GitHub 仓库，先只看 README 和 examples 目录
-  - https://github.com/openai/openai-agents-python
-- YouTube 搜索：`AI agent workflow tutorial beginner`
-  - https://www.youtube.com/results?search_query=AI+agent+workflow+tutorial+beginner
+- **必学，30 分钟：**Anthropic [Building Effective Agents](https://www.anthropic.com/engineering/building-effective-agents)
+  - 只读 `What are agents?`、`When (and when not) to use agents` 和 `Summary`。
+  - 暂时跳过框架清单和各工作流实现细节。
+- **提取任务，15 分钟：**写出 workflow 与 agent 的区别，以及“何时不该做 Agent”的两个判断条件。
 
-今天看 Agent 资料只是预告，不需要学细节。你只要带着一个问题看：
+今天看 Agent 资料只是预告，不需要学框架。你只要带着一个问题看：
 
 ```text
 Agent 不是聊天机器人，而是围绕目标、工具、步骤和验收组成的工作流。

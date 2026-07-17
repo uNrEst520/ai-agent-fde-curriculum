@@ -28,11 +28,14 @@ REQUIRED = [
     "docs/curriculum/course-unit-template.md",
     "docs/governance/course-governance.md",
     "docs/governance/source-selection-standard.md",
+    "docs/resources/README.md",
+    "docs/resources/catalog.json",
     "docs/governance/research-to-course.md",
     "docs/governance/publication-safety.md",
     "docs/governance/completion-audit-v1.1.md",
     "research/README.md",
     "research/reading-list.md",
+    "research/education-source-watchlist.md",
     "research/paper-note-template.md",
     "research/sources.json",
     "research/radar/latest.md",
@@ -157,6 +160,71 @@ def check_research_sources() -> list[str]:
         for field in ("name", "search_query", "max_results"):
             if field not in query:
                 errors.append(f"research query {index} missing {field}")
+    return errors
+
+
+def check_learning_resources() -> list[str]:
+    path = ROOT / "docs" / "resources" / "catalog.json"
+    if not path.exists():
+        return []
+
+    try:
+        data = json.loads(path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"invalid learning resource catalog: {exc}"]
+
+    resources = data.get("resources")
+    if not isinstance(resources, list) or not resources:
+        return ["learning resource catalog must contain resources"]
+
+    errors: list[str] = []
+    required_fields = (
+        "id", "title", "provider", "kind", "url", "access", "role",
+        "used_in", "required_scope", "estimated_minutes", "language",
+        "last_verified",
+    )
+    ids: list[str] = []
+    for index, resource in enumerate(resources):
+        if not isinstance(resource, dict):
+            errors.append(f"learning resource {index} must be an object")
+            continue
+        for field in required_fields:
+            if field not in resource:
+                errors.append(f"learning resource {index} missing {field}")
+        resource_id = resource.get("id")
+        if isinstance(resource_id, str):
+            ids.append(resource_id)
+        url = resource.get("url")
+        if not isinstance(url, str) or not url.startswith("https://"):
+            errors.append(f"learning resource {resource_id or index} must use https")
+        used_in = resource.get("used_in")
+        if not isinstance(used_in, list) or not used_in:
+            errors.append(f"learning resource {resource_id or index} must define used_in")
+        minutes = resource.get("estimated_minutes")
+        if not isinstance(minutes, int) or minutes < 0:
+            errors.append(
+                f"learning resource {resource_id or index} has invalid estimated_minutes"
+            )
+        verified = resource.get("last_verified")
+        if not isinstance(verified, str) or not re.fullmatch(
+            r"\d{4}-\d{2}-\d{2}", verified
+        ):
+            errors.append(
+                f"learning resource {resource_id or index} has invalid last_verified"
+            )
+
+    duplicate_ids = sorted({item for item in ids if ids.count(item) > 1})
+    errors.extend(f"duplicate learning resource id: {item}" for item in duplicate_ids)
+
+    for relative in (
+        "docs/course/week-01/day-01-to-day-07.md",
+        "docs/curriculum/modules/00-learning-operating-system.md",
+        "docs/curriculum/modules/01-python-computational-thinking.md",
+    ):
+        course_text = (ROOT / relative).read_text(encoding="utf-8-sig")
+        if "youtube.com/results" in course_text:
+            errors.append(f"pilot course contains a search-results URL: {relative}")
+
     return errors
 
 
@@ -374,6 +442,7 @@ def main() -> int:
         + check_internal_links()
         + check_ability_model()
         + check_research_sources()
+        + check_learning_resources()
         + check_curriculum_catalog()
         + check_build_catalog()
         + check_publication_safety()

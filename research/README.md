@@ -11,6 +11,7 @@
 - `sources.json`：自动检索主题和关键词。
 - `radar/latest.md`：每周自动生成的候选论文。
 - `reading-list.md`：经过人工筛选的核心与前沿阅读。
+- [教育资源观察库](education-source-watchlist.md)：大学课程、作者 GitHub 与教育检索工具候选。
 - `paper-note-template.md`：深读、复现和课程转化模板。
 
 ## 更新节奏
