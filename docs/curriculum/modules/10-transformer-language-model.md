@@ -30,6 +30,8 @@
 
 ## 从零构建
 
+[进入逐步构建指南](../../builds/tiny-transformer.md)
+
 实现 BPE 或等价 tokenizer、因果注意力、Transformer block、训练循环和生成器，在小数据集上训练可运行模型。
 
 ## 真实交付

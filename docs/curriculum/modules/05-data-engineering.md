@@ -27,6 +27,8 @@
 
 ## 从零构建
 
+[进入逐步构建指南](../../builds/reproducible-data-pipeline.md)
+
 用 Python、SQL 和本地文件构建一个具备校验、去重、增量更新和血缘记录的数据管道。
 
 ## 真实交付

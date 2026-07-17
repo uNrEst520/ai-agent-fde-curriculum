@@ -13,6 +13,13 @@ class CurriculumCatalogTests(unittest.TestCase):
         cls.data = json.loads(CATALOG.read_text(encoding="utf-8-sig"))
         cls.modules = cls.data["modules"]
 
+    def test_program_has_nineteen_core_and_twelve_electives(self):
+        core = [module for module in self.modules if module["stage"] != "elective"]
+        electives = [module for module in self.modules if module["stage"] == "elective"]
+        self.assertEqual(len(core), 19)
+        self.assertEqual(len(electives), 12)
+        self.assertEqual(len(self.modules), 31)
+
     def test_module_ids_are_unique(self):
         module_ids = [module["id"] for module in self.modules]
         self.assertEqual(len(module_ids), len(set(module_ids)))

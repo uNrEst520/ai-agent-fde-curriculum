@@ -24,6 +24,8 @@
 
 ## 从零构建
 
+[进入逐步构建指南](../../builds/reinforcement-learning-agent.md)
+
 实现 Gridworld 环境、动态规划、Q-learning 和 DQN，记录随机种子、学习曲线和策略行为。
 
 ## 真实交付

@@ -1,0 +1,254 @@
+{
+  "schema_version": 1,
+  "method": "build-verify-explain",
+  "projects": [
+    {
+      "id": "B00",
+      "module": "O00",
+      "title": "个人学习操作系统",
+      "page": "personal-learning-os.md",
+      "estimated_hours": "12-20",
+      "level": "入门"
+    },
+    {
+      "id": "B01",
+      "module": "SE01",
+      "title": "命令行数据应用",
+      "page": "cli-data-app.md",
+      "estimated_hours": "35-50",
+      "level": "入门"
+    },
+    {
+      "id": "B02",
+      "module": "SE02",
+      "title": "HTTP 与完整 Web 服务",
+      "page": "http-web-service.md",
+      "estimated_hours": "45-65",
+      "level": "基础"
+    },
+    {
+      "id": "B03",
+      "module": "SE03",
+      "title": "AI 辅助工程流水线",
+      "page": "ai-engineering-pipeline.md",
+      "estimated_hours": "35-55",
+      "level": "基础"
+    },
+    {
+      "id": "B04",
+      "module": "SE04",
+      "title": "进程、网络与缓存实验室",
+      "page": "systems-network-lab.md",
+      "estimated_hours": "35-50",
+      "level": "基础"
+    },
+    {
+      "id": "B05",
+      "module": "DE01",
+      "title": "可复现数据管道",
+      "page": "reproducible-data-pipeline.md",
+      "estimated_hours": "35-55",
+      "level": "基础"
+    },
+    {
+      "id": "B06",
+      "module": "AI01",
+      "title": "数学与优化可视化实验室",
+      "page": "math-optimization-lab.md",
+      "estimated_hours": "45-65",
+      "level": "基础"
+    },
+    {
+      "id": "B07",
+      "module": "AI02",
+      "title": "搜索、约束与规划引擎",
+      "page": "search-planning-engine.md",
+      "estimated_hours": "40-60",
+      "level": "基础"
+    },
+    {
+      "id": "B08",
+      "module": "ML01",
+      "title": "微型机器学习库",
+      "page": "tiny-ml-library.md",
+      "estimated_hours": "55-80",
+      "level": "中级"
+    },
+    {
+      "id": "B09",
+      "module": "DL01",
+      "title": "自动微分与神经网络引擎",
+      "page": "autograd-engine.md",
+      "estimated_hours": "60-90",
+      "level": "中级"
+    },
+    {
+      "id": "B10",
+      "module": "LM01",
+      "title": "微型 Transformer 语言模型",
+      "page": "tiny-transformer.md",
+      "estimated_hours": "80-120",
+      "level": "中高级"
+    },
+    {
+      "id": "B11",
+      "module": "AP01",
+      "title": "供应商无关模型客户端",
+      "page": "model-client-runtime.md",
+      "estimated_hours": "30-45",
+      "level": "中级"
+    },
+    {
+      "id": "B12",
+      "module": "AP02",
+      "title": "从零构建 RAG 引擎",
+      "page": "rag-engine.md",
+      "estimated_hours": "45-70",
+      "level": "中级"
+    },
+    {
+      "id": "B13",
+      "module": "AP03",
+      "title": "工具协议与 MCP 系统",
+      "page": "mcp-tool-system.md",
+      "estimated_hours": "45-65",
+      "level": "中级"
+    },
+    {
+      "id": "B14",
+      "module": "AG01",
+      "title": "可恢复 Agent Runtime",
+      "page": "agent-runtime.md",
+      "estimated_hours": "55-85",
+      "level": "高级"
+    },
+    {
+      "id": "B15",
+      "module": "EV01",
+      "title": "AI 评测与红队框架",
+      "page": "ai-eval-harness.md",
+      "estimated_hours": "45-70",
+      "level": "高级"
+    },
+    {
+      "id": "B16",
+      "module": "PR01",
+      "title": "生产模型网关",
+      "page": "model-gateway.md",
+      "estimated_hours": "55-85",
+      "level": "高级"
+    },
+    {
+      "id": "B17",
+      "module": "FD01",
+      "title": "FDE 业务发现工具箱",
+      "page": "fde-discovery-kit.md",
+      "estimated_hours": "25-40",
+      "level": "中高级"
+    },
+    {
+      "id": "B18",
+      "module": "FD02",
+      "title": "企业 AI 上岗交付",
+      "page": "enterprise-ai-deployment.md",
+      "estimated_hours": "120-180",
+      "level": "毕业项目"
+    },
+    {
+      "id": "B19",
+      "module": "XCV",
+      "title": "视觉与视频分析流水线",
+      "page": "vision-video-pipeline.md",
+      "estimated_hours": "70-110",
+      "level": "高级选修"
+    },
+    {
+      "id": "B20",
+      "module": "XSP",
+      "title": "实时语音助手",
+      "page": "realtime-voice-assistant.md",
+      "estimated_hours": "55-85",
+      "level": "高级选修"
+    },
+    {
+      "id": "B21",
+      "module": "XGM",
+      "title": "微型扩散模型",
+      "page": "diffusion-model.md",
+      "estimated_hours": "70-110",
+      "level": "高级选修"
+    },
+    {
+      "id": "B22",
+      "module": "XRL",
+      "title": "强化学习智能体",
+      "page": "reinforcement-learning-agent.md",
+      "estimated_hours": "70-110",
+      "level": "高级选修"
+    },
+    {
+      "id": "B23",
+      "module": "XRS",
+      "title": "推荐与预测实验室",
+      "page": "recommender-forecast-lab.md",
+      "estimated_hours": "50-80",
+      "level": "高级选修"
+    },
+    {
+      "id": "B24",
+      "module": "XLM",
+      "title": "语言模型训练与对齐实验",
+      "page": "lm-training-alignment.md",
+      "estimated_hours": "100-160",
+      "level": "高级选修"
+    },
+    {
+      "id": "B25",
+      "module": "XRE",
+      "title": "论文复现实验包",
+      "page": "paper-reproduction.md",
+      "estimated_hours": "45-90",
+      "level": "高级选修"
+    },
+    {
+      "id": "B26",
+      "module": "XDS",
+      "title": "领域 AI 产品",
+      "page": "domain-ai-product.md",
+      "estimated_hours": "90-140",
+      "level": "高级选修"
+    },
+    {
+      "id": "B27",
+      "module": "XCA",
+      "title": "因果与实验实验室",
+      "page": "causal-experiment-lab.md",
+      "estimated_hours": "45-70",
+      "level": "高级选修"
+    },
+    {
+      "id": "B28",
+      "module": "XKG",
+      "title": "知识图谱与推理引擎",
+      "page": "knowledge-graph-engine.md",
+      "estimated_hours": "50-80",
+      "level": "高级选修"
+    },
+    {
+      "id": "B29",
+      "module": "XRO",
+      "title": "二维机器人闭环模拟器",
+      "page": "robot-simulator.md",
+      "estimated_hours": "80-130",
+      "level": "高级选修"
+    },
+    {
+      "id": "B30",
+      "module": "XGV",
+      "title": "AI 用例治理登记系统",
+      "page": "ai-governance-registry.md",
+      "estimated_hours": "35-55",
+      "level": "高级选修"
+    }
+  ]
+}

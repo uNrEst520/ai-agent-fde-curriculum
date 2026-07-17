@@ -12,3 +12,7 @@
 | 研究雷达 | 每周生成 | 新论文、基准、协议和官方工程实践候选 |
 
 课程机器可读目录见 [catalog.json](docs/curriculum/catalog.json)。它也是自动检查课程链接、编号和先修关系的单一事实来源。
+
+
+- [AI 全领域覆盖图](docs/curriculum/ai-field-map.md)
+- [Build Your Own AI 项目阶梯](docs/builds/README.md)

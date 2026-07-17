@@ -19,6 +19,9 @@ REQUIRED = [
     "docs/curriculum/README.md",
     "docs/curriculum/competency-framework.md",
     "docs/curriculum/catalog.json",
+    "docs/curriculum/ai-field-map.md",
+    "docs/builds/README.md",
+    "docs/builds/catalog.json",
     "docs/curriculum/learning-contract.md",
     "docs/curriculum/assessment.md",
     "docs/curriculum/fde-capstone.md",
@@ -27,6 +30,7 @@ REQUIRED = [
     "docs/governance/source-selection-standard.md",
     "docs/governance/research-to-course.md",
     "docs/governance/publication-safety.md",
+    "docs/governance/completion-audit-v1.1.md",
     "research/README.md",
     "research/reading-list.md",
     "research/paper-note-template.md",
@@ -177,7 +181,7 @@ def check_curriculum_catalog() -> list[str]:
             continue
         for field in (
             "id", "title", "stage", "duration_weeks",
-            "prerequisites", "page", "build"
+            "prerequisites", "page", "build", "build_page"
         ):
             if field not in module:
                 errors.append(f"catalog module {index} missing {field}")
@@ -256,6 +260,114 @@ def check_curriculum_catalog() -> list[str]:
     return errors
 
 
+def check_build_catalog() -> list[str]:
+    catalog_path = ROOT / "docs" / "builds" / "catalog.json"
+    curriculum_path = ROOT / "docs" / "curriculum" / "catalog.json"
+    if not catalog_path.exists() or not curriculum_path.exists():
+        return []
+
+    try:
+        build_data = json.loads(catalog_path.read_text(encoding="utf-8-sig"))
+        curriculum_data = json.loads(curriculum_path.read_text(encoding="utf-8-sig"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"invalid build catalog: {exc}"]
+
+    projects = build_data.get("projects")
+    if not isinstance(projects, list) or not projects:
+        return ["build catalog must contain projects"]
+
+    errors: list[str] = []
+    module_by_id = {
+        module.get("id"): module
+        for module in curriculum_data.get("modules", [])
+        if isinstance(module, dict) and isinstance(module.get("id"), str)
+    }
+    project_ids = [project.get("id") for project in projects if isinstance(project, dict)]
+    project_modules = [
+        project.get("module") for project in projects if isinstance(project, dict)
+    ]
+
+    duplicate_ids = sorted({
+        project_id for project_id in project_ids
+        if isinstance(project_id, str) and project_ids.count(project_id) > 1
+    })
+    duplicate_modules = sorted({
+        module_id for module_id in project_modules
+        if isinstance(module_id, str) and project_modules.count(module_id) > 1
+    })
+    errors.extend(f"duplicate build project id: {item}" for item in duplicate_ids)
+    errors.extend(f"module has multiple build projects: {item}" for item in duplicate_modules)
+
+    build_index = (catalog_path.parent / "README.md").read_text(encoding="utf-8-sig")
+    for project in projects:
+        if not isinstance(project, dict):
+            errors.append("build catalog project must be an object")
+            continue
+        for field in ("id", "module", "title", "page", "estimated_hours", "level"):
+            if field not in project:
+                errors.append(f"build catalog project missing {field}")
+        project_id = project.get("id")
+        module_id = project.get("module")
+        page = project.get("page")
+        if module_id not in module_by_id:
+            errors.append(f"build project {project_id} references unknown module {module_id}")
+            continue
+        module = module_by_id[module_id]
+        expected_build_page = f"../builds/{page}"
+        if module.get("build_page") != expected_build_page:
+            errors.append(
+                f"module {module_id} build_page is {module.get('build_page')}, "
+                f"expected {expected_build_page}"
+            )
+        if not isinstance(page, str):
+            continue
+        build_page = (catalog_path.parent / page).resolve()
+        if not build_page.is_file():
+            errors.append(f"build project {project_id} page does not exist: {page}")
+            continue
+        if f"]({page})" not in build_index:
+            errors.append(f"build index does not link project {project_id}: {page}")
+        build_text = build_page.read_text(encoding="utf-8-sig")
+        for heading in ("## 逐步关卡", "## 通用验收", "## AI 使用规则"):
+            if heading not in build_text:
+                errors.append(f"build project {project_id} missing section: {heading}")
+        milestone_count = len(re.findall(r"^\| \d+\.", build_text, re.MULTILINE))
+        if milestone_count < 6:
+            errors.append(
+                f"build project {project_id} has {milestone_count} milestones; expected at least 6"
+            )
+        module_page = (curriculum_path.parent / module["page"]).resolve()
+        relative_build_link = f"(../../builds/{page})"
+        module_text = module_page.read_text(encoding="utf-8-sig")
+        for heading in (
+            "## 周计划",
+            "## 从零构建",
+            "## 真实交付",
+            "## 必交证据",
+            "## 反 bypass 口试",
+        ):
+            if heading not in module_text:
+                errors.append(f"module {module_id} missing section: {heading}")
+        if relative_build_link not in module_text:
+            errors.append(
+                f"module {module_id} does not link its build guide: {page}"
+            )
+
+    expected_modules = set(module_by_id)
+    actual_modules = {
+        item for item in project_modules if isinstance(item, str)
+    }
+    for module_id in sorted(expected_modules - actual_modules):
+        errors.append(f"module {module_id} has no build project")
+    for module_id in sorted(actual_modules - expected_modules):
+        errors.append(f"build project has unknown module: {module_id}")
+
+    root_readme = (ROOT / "README.md").read_text(encoding="utf-8-sig")
+    if "(docs/builds/README.md)" not in root_readme:
+        errors.append("README does not link the Build Your Own AI index")
+    return errors
+
+
 def main() -> int:
     errors = (
         check_required()
@@ -263,6 +375,7 @@ def main() -> int:
         + check_ability_model()
         + check_research_sources()
         + check_curriculum_catalog()
+        + check_build_catalog()
         + check_publication_safety()
     )
     if errors:

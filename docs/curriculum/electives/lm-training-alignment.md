@@ -26,6 +26,8 @@
 
 ## 从零构建
 
+[进入逐步构建指南](../../builds/lm-training-alignment.md)
+
 基于自研微型 Transformer 完成数据清洗、训练、SFT 或偏好优化之一，并亲手做性能剖析与瓶颈实验。
 
 ## 真实交付
