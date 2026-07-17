@@ -1,0 +1,55 @@
+name: Paper Proposal
+description: 推荐论文进入人工评审或课程实验
+title: "[Paper] "
+labels:
+  - research
+body:
+  - type: input
+    id: paper
+    attributes:
+      label: 原始论文链接
+      placeholder: "https://arxiv.org/abs/..."
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: 版本与日期
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 论文解决的问题和核心证据
+    validations:
+      required: true
+  - type: input
+    id: abilities
+    attributes:
+      label: 对应能力标签
+      placeholder: "AGENT, EVAL, FDE"
+    validations:
+      required: true
+  - type: textarea
+    id: experiment
+    attributes:
+      label: 建议的最小复现实验
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: 限制、反例和安全风险
+    validations:
+      required: true
+  - type: dropdown
+    id: destination
+    attributes:
+      label: 建议位置
+      options:
+        - 观察列表
+        - 推荐阅读
+        - 方向专修候选
+        - 共同核心候选
+    validations:
+      required: true

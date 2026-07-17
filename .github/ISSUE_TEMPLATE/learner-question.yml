@@ -1,0 +1,38 @@
+name: Learner Question
+description: 提交具体的学习、环境或项目问题
+title: "[Learner] "
+labels:
+  - learner-question
+body:
+  - type: input
+    id: unit
+    attributes:
+      label: 所在课程单元
+      placeholder: "Week 01 Day 5"
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: 你原本想完成什么
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: 已经尝试了什么
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: 实际观察到什么
+      description: 包括错误信息、页面现象或测试结果，注意删除密钥和隐私数据。
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: 具体不理解的问题
+    validations:
+      required: true

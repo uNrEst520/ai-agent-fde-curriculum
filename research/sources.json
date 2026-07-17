@@ -1,0 +1,25 @@
+{
+  "max_total": 24,
+  "queries": [
+    {
+      "name": "Agent planning and tool use",
+      "search_query": "cat:cs.AI AND (all:agent OR all:agentic) AND (all:planning OR all:tool-use OR all:tool)",
+      "max_results": 12
+    },
+    {
+      "name": "Agent evaluation and reliability",
+      "search_query": "(cat:cs.AI OR cat:cs.CL) AND (all:agent OR all:agentic) AND (all:evaluation OR all:benchmark OR all:reliability)",
+      "max_results": 12
+    },
+    {
+      "name": "Coding agents",
+      "search_query": "cat:cs.SE AND (all:agent OR all:agentic OR all:LLM) AND (all:software OR all:coding)",
+      "max_results": 10
+    },
+    {
+      "name": "Agent safety and human collaboration",
+      "search_query": "(cat:cs.AI OR cat:cs.HC OR cat:cs.CR) AND (all:agent OR all:agentic) AND (all:safety OR all:security OR all:human)",
+      "max_results": 10
+    }
+  ]
+}

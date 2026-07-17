@@ -1,0 +1,206 @@
+:root {
+  font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif;
+  color: #17211c;
+  background: #f5f2ea;
+  --ink: #17211c;
+  --muted: #667067;
+  --paper: #fffdf7;
+  --line: #ddd7c8;
+  --teal: #1e7f70;
+  --blue: #276a9f;
+  --gold: #c58b22;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #fffdf7 0%, #f5f2ea 54%, #eef6f1 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page {
+  width: min(1180px, calc(100% - 36px));
+  margin: 0 auto;
+  padding: 28px 0 44px;
+}
+
+.hero {
+  min-height: 86vh;
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(320px, 1.2fr);
+  gap: 26px;
+  align-items: center;
+}
+
+.heroCopy {
+  display: grid;
+  gap: 18px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+p {
+  margin: 0;
+}
+
+h1 {
+  max-width: 9em;
+  font-size: clamp(48px, 8vw, 92px);
+  line-height: 0.95;
+  letter-spacing: 0;
+}
+
+h2 {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.heroCopy > p:not(.eyebrow) {
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.heroActions a,
+.matrix a {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--ink);
+  color: #fffdf7;
+  font-weight: 850;
+}
+
+.heroActions a + a {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.productShot {
+  margin: 0;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--paper);
+  box-shadow: 0 24px 70px rgba(32, 38, 30, 0.16);
+}
+
+.productShot img {
+  display: block;
+  width: 100%;
+  max-height: 68vh;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+}
+
+.productShot figcaption {
+  padding: 10px 2px 2px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.matrix {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 8px;
+}
+
+.matrix article,
+.flow {
+  display: grid;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 253, 247, 0.86);
+}
+
+.matrix span {
+  color: var(--gold);
+  font-weight: 950;
+}
+
+.matrix p,
+.flow li {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.matrix a {
+  width: fit-content;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.flow {
+  grid-template-columns: minmax(0, 0.7fr) minmax(0, 1fr);
+  margin-top: 14px;
+  align-items: start;
+}
+
+.flow ol {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+@media (max-width: 900px) {
+  .hero,
+  .flow {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: auto;
+    padding-top: 24px;
+  }
+
+  .matrix {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .page {
+    width: min(100% - 24px, 1180px);
+  }
+
+  .matrix {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 46px;
+  }
+}
