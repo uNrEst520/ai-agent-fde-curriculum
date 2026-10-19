@@ -1,229 +1,229 @@
 # 最新研究候选
 
-生成日期：2026-07-17。
+生成日期：2026-10-19。
 
 > 本页由脚本自动生成，只是待审队列，不代表课程推荐。论文必须经过人工初筛、深读和复现实验。
 
 ## Agent planning and tool use
 
-### [Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](https://arxiv.org/abs/2607.15263v1)
+### [GatewayBench: Unified Capability and Security Evaluation Platform for MCP Gateways](https://arxiv.org/abs/2610.23449v1)
 
-- 日期：2026-07-16
-- 作者：Paul Kassianik, Blaine Nelson, Yaron Singer
-- 分类：cs.CR, cs.AI
-- 相关性分：11
-- 摘要：Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry que…
-- 人工评审：待处理
-
-### [BrainPilot: Automating Brain Discovery with Agentic Research](https://arxiv.org/abs/2607.15079v1)
-
-- 日期：2026-07-16
-- 作者：Haoxuan Li, Tianci Gao, Jianhe Li, Yang Fan 等
+- 日期：2026-10-16
+- 作者：Yitian Zheng, Zhaorun Chen, Haoyu Li, Bo Li
 - 分类：cs.AI
-- 相关性分：11
-- 摘要：Understanding the brain increasingly depends on integrating evidence across scales, modalities, and disciplines. Addressing a single research question therefore requires a coordinated sequence of operations, from surveying prior work to executing analyses and interpreting results in light of domain knowledge. AI agent…
+- 相关性分：13
+- 摘要：AI agents have increasingly interacted with external environments by invoking tools, with Model Context Protocol (MCP) emerging as a standard interface for connecting agents to heterogeneous tools and services. As organizations deploy agents at scale, MCP gateways have become a critical middleware layer for aggregatin…
 - 人工评审：待处理
 
-### [LQCDMaster: Agentic Scientific Computing for Lattice Quantum Chromodynamics Research](https://arxiv.org/abs/2607.15001v1)
+### [Monitor-Validity Failures: LLM Safety Evidence Paths at Evolving Framework Boundaries](https://arxiv.org/abs/2610.23362v1)
 
-- 日期：2026-07-16
-- 作者：Haofei Gao, Tingjia Miao, Wenkai Jin, Muhua Zhang 等
-- 分类：hep-lat, cs.AI, hep-ph
-- 相关性分：11
-- 摘要：Lattice quantum chromodynamics (LQCD) provides a first-principles framework for computing hadronic observables, but its practical use remains limited by the substantial expertise required to turn research motivation into reliable computing workflows. Here we present \textsc{LQCDMaster}, a tool-augmented, skill-guided…
-- 人工评审：待处理
-
-### [OmniaBench: Benchmarking General AI Agents Across Diverse Scenarios](https://arxiv.org/abs/2607.14989v1)
-
-- 日期：2026-07-16
-- 作者：Chengyu Shen, Yujie Fu, Gangtao Xin, Yanheng Hou 等
-- 分类：cs.CL, cs.AI
-- 相关性分：11
-- 摘要：Large language models are increasingly evolving from text generators into general agents capable of understanding user requests, invoking external tools, and completing complex tasks through interaction. However, existing agent benchmarks often focus on limited scenarios, tool ecosystems, or interaction formats, makin…
-- 人工评审：待处理
-
-### [SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents](https://arxiv.org/abs/2607.14543v1)
-
-- 日期：2026-07-16
-- 作者：Huaigang Yang, Ya Li, Min Ren, Bo Dai 等
-- 分类：cs.RO, cs.AI
-- 相关性分：11
-- 摘要：Vision-language models (VLMs) are increasingly used as the reasoning backbone of embodied agents, enabling robots to interpret visual scenes, follow language instructions, and plan multi-step actions. In household environments, however, safety depends not only on recognizing objects, but also on how actions change the…
-- 人工评审：待处理
-
-### [RetroAgent: Harnessing LLMs to Search Over Structured Memory for Agentic Retrosynthesis Planning](https://arxiv.org/abs/2607.14512v1)
-
-- 日期：2026-07-16
-- 作者：Yanqiao Zhu, Jingru Gan, Xiaoqi Sun, Fang Sun 等
-- 分类：cs.AI, cs.CL, cs.LG
+- 日期：2026-10-16
+- 作者：Junchi Liao
+- 分类：cs.AI, cs.CR, cs.SE
 - 相关性分：10
-- 摘要：Multi-step retrosynthesis planning seeks to decompose a target molecule into commercially available building blocks through a sequence of feasible reactions. The vast combinatorial search space makes this task challenging even for expert chemists. Traditional methods combine tree search with offline-trained value netw…
+- 摘要：Modern LLM applications rely on runtime monitors that inspect tool calls, traces, streams, detector outputs, and verifier inputs. This creates an interface-reliability problem: a framework path may remain operational while policy-relevant evidence never reaches its decision point. In one representative case, a regex d…
 - 人工评审：待处理
 
-### [StructureClaw: Traceable LLM Agents and an Executable Benchmark for Structural Engineering Workflows](https://arxiv.org/abs/2607.14896v1)
+### [From Trajectories to Differentiated Skills: Cognitive Differentiation for Self-Improving Agents](https://arxiv.org/abs/2610.23599v1)
 
-- 日期：2026-07-16
-- 作者：Sizhong Qin, Yi Gu, Yao Jiang, Ao Cai 等
-- 分类：cs.SE, cs.AI, cs.MA
-- 相关性分：9
-- 摘要：Addressing a structural-engineering request requires more than a single answer; it requires a chain of interdependent artifacts: interpreted requirements, a computable model, validation records, solver outputs, code-check records, and a final report. Evaluations centered on question answering or script generation rare…
-- 人工评审：待处理
-
-### [MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers](https://arxiv.org/abs/2607.14642v1)
-
-- 日期：2026-07-16
-- 作者：Huanxi Liu, Kun Hu, Jiaqi Liao, Qiang Wang 等
-- 分类：cs.AI, cs.SE
-- 相关性分：9
-- 摘要：As Model Context Protocol (MCP) servers emerge as the core infrastructure for connecting LLMs with external tools, existing benchmarks leverage real-world MCP servers to evaluate LLM agents' tool-using capabilities. However, these benchmarks overlook the continuous evolution of tool interfaces and functionalities with…
-- 人工评审：待处理
-
-### [TopoAgent: A Self-Evolving Topological Agent for Multimodal Scientific Reasoning](https://arxiv.org/abs/2607.14658v1)
-
-- 日期：2026-07-16
-- 作者：Mingze Xu, Yinghui Li, Jiayi Kuang, Zhanhui Kang 等
+- 日期：2026-10-16
+- 作者：Yewei Zhao, Derong Xu, Wei Chen, Yin Xu 等
 - 分类：cs.AI
 - 相关性分：8
-- 摘要：While Multimodal Large Language Models (MLLMs) excel in general tasks, rigorous scientific reasoning remains challenging due to the limitations of monolithic, linear planning. Such sequential designs often suffer from visual-semantic misalignment, long-context hallucinations, and brittle execution under fixed task gra…
+- 摘要：Large language model (LLM) agents tackle complex tasks through reasoning and interaction with external environments. Agent skills provide persistent, transferable capabilities that guide task planning, inform contextual decisions, support tool use, and enable executable procedures. Yet existing skill-evolution methods…
 - 人工评审：待处理
 
-### [Plover: Steering GUI Agents through Plan-Centric Interaction](https://arxiv.org/abs/2607.15193v1)
+### [OfficeTown: Generative Organizations for Evolving Agent Intelligence](https://arxiv.org/abs/2610.23194v1)
 
-- 日期：2026-07-16
-- 作者：Madhumitha Venkatesan, Shicheng Wen, Jiajing Guo, Jorge Piazentin Ono 等
+- 日期：2026-10-16
+- 作者：Hongchen Wei, Daohong Ying, Zhi Hong, Aidan Wu 等
+- 分类：cs.AI
+- 相关性分：8
+- 摘要：AI agents increasingly use files and software tools to produce professional deliverables. Such work draws on materials, decisions, and feedback accumulated across assignments. We introduce OfficeTown, a generative simulation framework for professional organizations in which tasks and their context arise from continuin…
+- 人工评审：待处理
+
+### [Robust Function Calling for LLM Agents Under Interface Drift](https://arxiv.org/abs/2610.23342v1)
+
+- 日期：2026-10-16
+- 作者：Aniruddha Chattopadhyay, Kanishka Halder, Partha Sarathi Roy
+- 分类：cs.AI, cs.CL, cs.SE
+- 相关性分：7
+- 摘要：Tool-augmented language-model agents rely on interface text: tool descriptions, argument schemas, and the candidate tool list shown at inference time. These interfaces often change after deployment even when the underlying tool semantics remain fixed, creating a practical reliability problem for function-calling syste…
+- 人工评审：待处理
+
+### [Adaptation of Computer Use Agents to New Software with User Manuals](https://arxiv.org/abs/2610.23012v1)
+
+- 日期：2026-10-16
+- 作者：Chulhoon Yoon, Kyungri Park, Jinyeong Yun, Daeyun Jeong 等
 - 分类：cs.AI
 - 相关性分：7
-- 摘要：Graphical user interface (GUI) automation remains challenging in real-world environments, where dynamic layouts, unexpected dialogs, and evolving interface states can cause autonomous agents to drift from user intent. Recent vision-based multimodal agents improve flexibility by operating directly over screenshots and…
+- 摘要：Recent advances in multimodal foundation models have significantly improved the ability to operate real-world software through graphical user interfaces (GUIs) using visual observations and natural language instructions. However, maintaining strong performance on unseen applications remains challenging, as practical t…
 - 人工评审：待处理
 
-### [An Intelligent-Cloud Edge Multimodal Interaction System for Robots](https://arxiv.org/abs/2607.14675v1)
+### [S-GAP: Stealthy Graph Attack Primitives for Graph Large Language Models](https://arxiv.org/abs/2610.23465v1)
 
-- 日期：2026-07-16
-- 作者：Zihan Guo, Xiaoqi Li
-- 分类：cs.RO, cs.AI
+- 日期：2026-10-16
+- 作者：Wenda Li, Tongya Zheng, Shunyu Liu, Hanyang Yuan 等
+- 分类：cs.AI
 - 相关性分：6
-- 摘要：Robust human-robot interaction in complex environments requires accurate gesture perception, semantic scene understanding, and reliable task planning under limited onboard computing resources. This paper presents a cloud-edge multimodal interaction framework that integrates an enhanced YOLO-based gesture detector with…
+- 摘要：Graph Large Language Models (GraphLLMs) enable powerful semantic understanding and reasoning over Text-Attributed Graphs (TAGs), while their semantic reasoning may exhibit vulnerabilities to perturbations in node text and graph structure under adversarial attack evaluation. Existing attacks typically construct textual…
 - 人工评审：待处理
 
-### [SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration](https://arxiv.org/abs/2607.15257v1)
+### [Annotrace: A Workbench for Step-Level Annotation of Agent Traces](https://arxiv.org/abs/2610.23284v1)
 
-- 日期：2026-07-16
-- 作者：Yuyao Zhang, Junjie Gao, Zhengxian Wu, Jiaming Fan 等
-- 分类：cs.AI, cs.IR
-- 相关性分：4
-- 摘要：Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-agent systems can bec…
+- 日期：2026-10-16
+- 作者：Arun Josephraj Arokiaraj, Chenyi Huang, Sahan Bulathwela, Zekun Wu 等
+- 分类：cs.AI, cs.CL, cs.HC, cs.MA
+- 相关性分：6
+- 摘要：Every study of why LLM agents fail begins by labelling traces by hand, and every such study builds its own throwaway tool. Observability platforms record agent traces but offer no structured labelling; annotation tools label text but have no notion of a step, a delegation or a tool call, leaving it unclear what the sm…
+- 人工评审：待处理
+
+### [Agentic In-Context Learning: What Algorithms Can Transformers Learn in Closed-Loop Interaction?](https://arxiv.org/abs/2610.23051v1)
+
+- 日期：2026-10-16
+- 作者：Shiguang Wu, Yaqing Wang, Quanming Yao
+- 分类：cs.AI
+- 相关性分：6
+- 摘要：The learning algorithm view of in-context learning (ICL) studies how fixed-parameter Transformers learn from supplied examples. Language model agents extend this setting through interaction: their actions determine what evidence enters context next. We call this regime Agentic In-Context Learning (Agentic ICL). Existi…
+- 人工评审：待处理
+
+### [Reward Engine: Reward-Centric Self-Evolution for Open-Ended Tool Agents](https://arxiv.org/abs/2610.22915v1)
+
+- 日期：2026-10-16
+- 作者：Litong Feng, Ji Qi, Yiran Cheng, Shaowu Pan 等
+- 分类：cs.AI
+- 相关性分：6
+- 摘要：Open-ended tool agents can complete the same objective through different tool paths, and their quality depends jointly on the interaction trace, environment state, and final artifacts, so such tasks rarely admit an executable ground-truth reward. The central challenge is therefore to construct a reward from existing e…
 - 人工评审：待处理
 
 ## Agent safety and human collaboration
 
-### [FlowGuard: From Signals to Evidence for MCP Security Detection](https://arxiv.org/abs/2607.14754v1)
+### [HardEval: An Execution-Verified Benchmark for AI-Driven Security Hardening and Compliance Remediation](https://arxiv.org/abs/2610.23685v1)
 
-- 日期：2026-07-16
-- 作者：Baichao An, Pei Chen, Geng Hong, Yueyue Chen 等
-- 分类：cs.CR
+- 日期：2026-10-16
+- 作者：Manohar Vellala, Soumya Banerjee, Sandip Roy, Ross Gore 等
+- 分类：cs.CR, cs.LG
 - 相关性分：11
-- 摘要：The Model Context Protocol (MCP) enables LLM agents to interact with external tools through metadata exchange, tool invocation, and response consumption. Existing MCP security scanners primarily reason about suspicious semantic signals rather than real execution behaviors, which can lead to unreliable risk assessment.…
+- 摘要：Implementing Security Technical Implementation Guide (STIG) controls remains a demanding operating-system administration task. Each natural-language security requirement must be translated into a precise and persistent configuration change. These changes span Secure Shell (SSH) configuration, authentication policy, au…
 - 人工评审：待处理
 
-### [MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents](https://arxiv.org/abs/2607.14651v1)
+### [ABF-Bench: A Verifiable Benchmark for Agentic Blockchain Forensics](https://arxiv.org/abs/2610.23656v1)
 
-- 日期：2026-07-16
-- 作者：Jifeng Gao, Kang Xia, Yi Zhang, Xiaobin Hong 等
-- 分类：cs.CR, cs.AI
-- 相关性分：10
-- 摘要：Persistent external memory enhances agent continuity but introduces persistent security vulnerabilities: adversarial content can be injected via standard interaction channels, retained across turns, and later distort downstream behavior. To address this challenge, we propose MemPoison, a comprehensive benchmark and an…
+- 日期：2026-10-16
+- 作者：Xiaohang Yu, Hejia Geng, William Knottenbelt
+- 分类：cs.CR
+- 相关性分：6
+- 摘要：Blockchain forensics is adversarial and open-ended: money launderers split, swap, and bridge funds, cut their trail at mixers or custodial services, and change tactics from one incident to the next. Investigators must keep adapting their tracing in response. Yet the immutability of public ledgers preserves every recor…
 - 人工评审：待处理
 
 ## Agent evaluation and reliability
 
-### [SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions](https://arxiv.org/abs/2607.15272v1)
+### [RL-Guided Temporal Localization for Dual-Channel Retrieval in Long-Horizon Agent Memory](https://arxiv.org/abs/2610.23598v1)
 
-- 日期：2026-07-16
-- 作者：Yasheng Sun, Zezi Zeng, Yifan Yang, Chong Luo 等
-- 分类：cs.CL, cs.AI
-- 相关性分：7
-- 摘要：Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scien…
-- 人工评审：待处理
-
-### [When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space](https://arxiv.org/abs/2607.15218v1)
-
-- 日期：2026-07-16
-- 作者：Weimeng Wang, Ziqiang Wang, Zihang Zhan, Chuanpu Fu 等
-- 分类：cs.AI, cs.CR
-- 相关性分：7
-- 摘要：Large language models (LLMs) increasingly serve as high-level planners for embodied agents, where linguistically benign instructions can become unsafe once grounded in the physical world. We study whether this physically grounded danger is the same safety problem as ordinary text-level content danger. Through hidden-s…
-- 人工评审：待处理
-
-### [MM-IssueLoc: A Controlled Benchmark for Evaluating Visual Evidence in Multimodal Repository-Level Issue Localization](https://arxiv.org/abs/2607.15205v1)
-
-- 日期：2026-07-16
-- 作者：Shaoxiong Zhan, Shi Hu, Boyu Feng, Hai Lin 等
-- 分类：cs.SE, cs.AI
-- 相关性分：7
-- 摘要：Real repository issues routinely include visual evidence such as screenshots, error dialogs, rendered UI states, and logs, yet repository-level issue localization is evaluated mostly as a text-only task. Existing multimodal SE benchmarks evaluate end-to-end repair, entangling localization with patch synthesis and obsc…
-- 人工评审：待处理
-
-### [Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search](https://arxiv.org/abs/2607.15253v1)
-
-- 日期：2026-07-16
-- 作者：Debayan Mukhopadhyay, Utshab Kumar Ghosh, Shubham Chatterjee
-- 分类：cs.IR, cs.CL
-- 相关性分：5
-- 摘要：Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model works as a search agent, issuing sever…
-- 人工评审：待处理
-
-### [Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents](https://arxiv.org/abs/2607.15095v1)
-
-- 日期：2026-07-16
-- 作者：Dylan Van Mulders, Matthias Bogaert, Dirk Van den Poel
-- 分类：cs.CL, cs.AI, cs.MA
-- 相关性分：5
-- 摘要：The formation of political coalitions is a complex negotiation driven by both concrete policy objectives and deep-seated ideological convictions. While Large Language Models (LLMs) open new avenues for computational political science, the neutrality and helpfulness biases instilled by Reinforcement Learning from Human…
-- 人工评审：待处理
-
-### [AutoSynthesis: An agentic system for automated meta-analysis](https://arxiv.org/abs/2607.15247v1)
-
-- 日期：2026-07-16
-- 作者：Moein Taherinezhad, Sebastian Maier, Gerardo Vitagliano, Francesco Pierri 等
+- 日期：2026-10-16
+- 作者：Dabin Sheng, Zhe Wu, Jinming Zhao, Junliang Xing 等
 - 分类：cs.AI
-- 相关性分：4
-- 摘要：Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficult to scale. Here, we introduce AutoSynthesis, an end-to-end multi-agent system for automated meta-analysis. Given a re…
+- 相关性分：10
+- 摘要：Time-aware retrieval is crucial for long-horizon LLM agents to effectively leverage ever-growing long-term memory. Existing methods focus on lexical or semantic similarity, leading to target memories being crowded out by temporally mismatched yet semantically similar candidates. Even time-aware approaches inject tempo…
 - 人工评审：待处理
 
-### [Concept-Guided Spatial Regularization for World Models in Atari Pong](https://arxiv.org/abs/2607.15142v1)
+### [SIT-Eval: Situation-Based Interactive Turn-by-Turn Evaluation of Conversational Agents](https://arxiv.org/abs/2610.23612v1)
 
-- 日期：2026-07-16
-- 作者：Yukuan Lu, Zaishuo Xia, Weyl Lu, Yubei Chen
-- 分类：cs.AI, cs.LG
-- 相关性分：4
-- 摘要：World models are usually evaluated as components of model-based reinforcement learning (MBRL) systems, while the world models themselves are rarely studied in isolation. We examine five representative visual world-model agents in Atari Pong: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM. After reproducing their trai…
+- 日期：2026-10-16
+- 作者：Ravil Mussabayev, Saveliy Zavertyaev, Dmitriy Parpulov, Andrey Savchenko
+- 分类：cs.CL, cs.AI
+- 相关性分：9
+- 摘要：The rapid proliferation of conversational AI agents necessitates evaluation methods that assess performance across diverse dialogue scenarios, utilizing multiple situational criteria, as appropriate behavior depends on context and encompasses various aspects. Existing dialogue benchmarks typically use static natural c…
+- 人工评审：待处理
+
+### [MuninAI: A Self-Hosted Agentic Framework for Independent Research Groups](https://arxiv.org/abs/2610.23480v1)
+
+- 日期：2026-10-16
+- 作者：Markus Fischer, Jens Meiler, Matthias Elgeti
+- 分类：cs.CL
+- 相关性分：9
+- 摘要：Research groups that want a language model grounded in their own literature face a choice between hosted services that receive their unpublished work and self-hosted deployments that keep the data local but give the model no access to the corpus. Munin is an open-source framework for a self-hosted scientific assistant…
+- 人工评审：待处理
+
+### [AI-Driven Reproducibility and Analytical Robustness in Scientific Discovery](https://arxiv.org/abs/2610.23845v1)
+
+- 日期：2026-10-16
+- 作者：Shicheng Liu, Krista Opsahl-Ong, Andrew Drozdov, Julian Killingback 等
+- 分类：cs.AI, cs.CL
+- 相关性分：6
+- 摘要：Reproducible and analytically robust research findings are essential to scientific progress, but evaluating these properties typically requires costly manual effort. We investigate whether LLM agents can help automate reproduction and robustness analysis, using a medical case study grounded in the Surveillance, Epidem…
+- 人工评审：待处理
+
+### [Execution Before Memory: Diagnosing Memory Failures in Video World Models](https://arxiv.org/abs/2610.23542v1)
+
+- 日期：2026-10-16
+- 作者：Weiyang Jin, Jiwen Yu, Sihan Xu, Yuwei Niu 等
+- 分类：cs.CV, cs.CL
+- 相关性分：6
+- 摘要：A memory test for a video world model should say whether the scene was set, whether the asked change was carried out, and whether the last frame shows the result. Current tests fold these into one number, so a low score is easy to read as forgetting. When the change is not carried out, the hidden state transition cann…
+- 人工评审：待处理
+
+### [DiscoveryRSI: Recursively Learning to Discover Valuable Hypotheses](https://arxiv.org/abs/2610.23839v1)
+
+- 日期：2026-10-16
+- 作者：Jianyuan Zhong, Chenwei Wu, Zhaochen Yu, Xixian Jiang 等
+- 分类：cs.CL
+- 相关性分：5
+- 摘要：Scientific discovery requires developing worthwhile hypotheses into practical investigations, yet learning from this evolving research process remains challenging. We introduce an operational definition of valuable and testable research hypotheses: evidence-grounded claims about consequential uncertainties, coupled wi…
+- 人工评审：待处理
+
+### [DrugHarness: An Evolvable Agent Harness for Computational Drug Discovery](https://arxiv.org/abs/2610.23791v1)
+
+- 日期：2026-10-16
+- 作者：Yuxing Chen, Zhisheng Zhang, Cheng Tang, Wei Li 等
+- 分类：cs.AI
+- 相关性分：5
+- 摘要：Computational drug discovery requires agents to compose scientific operations and adapt to changing evidence and constraints. Here we introduce DrugHarness, an evolvable agent harness coupling composable scientific execution with conditional skill induction. Its environment integrates over 80 scientific operations, bi…
 - 人工评审：待处理
 
 ## Coding agents
 
-### [Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents](https://arxiv.org/abs/2607.15143v1)
+### [Code Skill Server: A Large-Scale Search Engine for Code Generation Skills](https://arxiv.org/abs/2610.23186v1)
 
-- 日期：2026-07-16
-- 作者：Aadesh Bagmar, Pushkar Saraf
-- 分类：cs.CR, cs.HC, cs.SE
-- 相关性分：7
-- 摘要：AI coding agents set up projects by reading documentation and installing the dependencies it lists, without verifying their names, sources, or known vulnerabilities. By editing only a README, requirements file, or Makefile, an attacker can redirect the agent to an untrusted registry, a known-vulnerable version, or a w…
+- 日期：2026-10-16
+- 作者：Xiaoyong Li, Haolong Li, Dongliang Xu, Haoyu Li 等
+- 分类：cs.SE, cs.IR
+- 相关性分：9
+- 摘要：Agent skills have proven to be an effective technique for improving agent ability on specific tasks, including software engineering, natural science, and mathematics. During such a process, using agent skills often involves manually discovering and organizing skills from heterogeneous sources, while existing skill ret…
 - 人工评审：待处理
 
-### [FirmPilot: Evidence-Guided Multi-Agent Environment Recovery for IoT Firmware Rehosting](https://arxiv.org/abs/2607.14903v1)
+### [VulnSAGE: Adjudicating SAST Reports by Connecting LLM Reasoning to Program Structure](https://arxiv.org/abs/2610.23035v1)
 
-- 日期：2026-07-16
-- 作者：Yanbing Shen, Fan Zhang, Haitao Xu
+- 日期：2026-10-16
+- 作者：Jinbao Chen, Zixiang Zhou, Yu Zhang, Yihong Wu
+- 分类：cs.SE, cs.CR, cs.PL
+- 相关性分：8
+- 摘要：Static Application Security Testing (SAST) reports flag operations whose safety depends on project-specific context, and maintainers must decide which reports describe real defects. Large language models (LLMs) can interpret this context, but adjudicating a report with them requires the decisive code, which often lies…
+- 人工评审：待处理
+
+### [SIEVE: A Parameterized GitHub Corpus Builder for Software Engineering Research](https://arxiv.org/abs/2610.22544v1)
+
+- 日期：2026-10-15
+- 作者：Musfiqur Rahman, Mahi Begoug, Emad Shihab
+- 分类：cs.SE
+- 相关性分：8
+- 摘要：Software engineering research increasingly relies on large, richly annotated corpora of real-world code. Still, researchers typically assemble these with ad-hoc scripts or static, pre-built datasets that offer no control over corpus composition. This leaves a gap for a reusable tool that goes below the repository leve…
+- 人工评审：待处理
+
+### [MLOps-Bench: Benchmarking AI Agents on Production ML Engineering in Real Repositories](https://arxiv.org/abs/2610.23506v1)
+
+- 日期：2026-10-16
+- 作者：Quoc Co Tran, Hitesh Laxmichand Patel, Diwakar Mahajan, Kshitij Bakliwal 等
 - 分类：cs.SE
 - 相关性分：6
-- 摘要：Firmware rehosting executes firmware images in emulated environments such as QEMU to enable scalable dynamic analysis of Internet of Things (IoT) devices. In practice, rehosting pipelines remain fragile across diverse real-world firmware images, as reaching an externally observable execution state depends on tightly c…
+- 摘要：AI agents are increasingly expected to modify and maintain machine-learning systems in production, yet existing benchmarks primarily evaluate either competition-style ML experimentation or generic repository issue resolution. We introduce MLOps-Bench, a repository-grounded benchmark for production ML engineering. Unli…
 - 人工评审：待处理
 
-### [AI Prototyper: A Figma Plugin for Decomposition-Based GUI Prototyping with LLMs](https://arxiv.org/abs/2607.14830v1)
+### [Towards Agentic Proof Harness Engineering](https://arxiv.org/abs/2610.23241v1)
 
-- 日期：2026-07-16
-- 作者：Tawatchai Salangsingha, Sami Ashkan, Md Zia Ullah, Iain McGregor
+- 日期：2026-10-16
+- 作者：Rohith Kumar Shanmuganathan, Cedric Richter, Heike Wehrheim
 - 分类：cs.SE
-- 相关性分：5
-- 摘要：Graphical user interface (GUI) prototyping remains a time-consuming activity that demands both design expertise and considerable manual effort. As GUI prototypes are non-code artifacts that evolve alongside requirements throughout the development cycle, automating their generation is directly relevant to software main…
+- 相关性分：6
+- 摘要：Formal verification of real-world projects requires substantial manual effort, from specifying correctness properties to constructing the infrastructure needed to check them. We envision verification agents that assist developers throughout this process. Among the many tasks involved, one stands out as both foundation…
 - 人工评审：待处理
