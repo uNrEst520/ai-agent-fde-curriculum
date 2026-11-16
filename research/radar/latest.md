@@ -1,229 +1,229 @@
 # 最新研究候选
 
-生成日期：2026-07-17。
+生成日期：2026-11-16。
 
 > 本页由脚本自动生成，只是待审队列，不代表课程推荐。论文必须经过人工初筛、深读和复现实验。
 
 ## Agent planning and tool use
 
-### [Beyond Success Rate: Cost-Aware Evaluation of Offensive and Defensive Security Agents](https://arxiv.org/abs/2607.15263v1)
+### [JFinBench: A Continuously Refreshable Japanese Financial Benchmark from the Latest Certification Exams](https://arxiv.org/abs/2611.18130v1)
 
-- 日期：2026-07-16
-- 作者：Paul Kassianik, Blaine Nelson, Yaron Singer
-- 分类：cs.CR, cs.AI
-- 相关性分：11
-- 摘要：Security-agent evaluations commonly measure peak offensive capability under generous inference budgets, emphasizing vulnerability discovery, exploit development, penetration testing, and CTF completion. Such measurements are useful but incomplete: in operational security, every reasoning step, tool call, telemetry que…
-- 人工评审：待处理
-
-### [BrainPilot: Automating Brain Discovery with Agentic Research](https://arxiv.org/abs/2607.15079v1)
-
-- 日期：2026-07-16
-- 作者：Haoxuan Li, Tianci Gao, Jianhe Li, Yang Fan 等
+- 日期：2026-11-13
+- 作者：Issa Sugiura, Taro Makino, Takashi Ishida
 - 分类：cs.AI
-- 相关性分：11
-- 摘要：Understanding the brain increasingly depends on integrating evidence across scales, modalities, and disciplines. Addressing a single research question therefore requires a coordinated sequence of operations, from surveying prior work to executing analyses and interpreting results in light of domain knowledge. AI agent…
+- 相关性分：12
+- 摘要：Large language models (LLMs) are increasingly applied to finance, creating a need for benchmarks that evaluate their capabilities across financial systems with different regulations and practices. However, existing financial benchmarks provide limited coverage of country-specific financial systems, and they are diffic…
 - 人工评审：待处理
 
-### [LQCDMaster: Agentic Scientific Computing for Lattice Quantum Chromodynamics Research](https://arxiv.org/abs/2607.15001v1)
+### [Do Verifier Judgments Survive Abstraction? Measuring Verification Transport for LLM Agent Evaluation](https://arxiv.org/abs/2611.18471v1)
 
-- 日期：2026-07-16
-- 作者：Haofei Gao, Tingjia Miao, Wenkai Jin, Muhua Zhang 等
-- 分类：hep-lat, cs.AI, hep-ph
-- 相关性分：11
-- 摘要：Lattice quantum chromodynamics (LQCD) provides a first-principles framework for computing hadronic observables, but its practical use remains limited by the substantial expertise required to turn research motivation into reliable computing workflows. Here we present \textsc{LQCDMaster}, a tool-augmented, skill-guided…
-- 人工评审：待处理
-
-### [OmniaBench: Benchmarking General AI Agents Across Diverse Scenarios](https://arxiv.org/abs/2607.14989v1)
-
-- 日期：2026-07-16
-- 作者：Chengyu Shen, Yujie Fu, Gangtao Xin, Yanheng Hou 等
+- 日期：2026-11-13
+- 作者：Disha Sheshanarayana, Sai Linisha Reddy Goli
 - 分类：cs.CL, cs.AI
 - 相关性分：11
-- 摘要：Large language models are increasingly evolving from text generators into general agents capable of understanding user requests, invoking external tools, and completing complex tasks through interaction. However, existing agent benchmarks often focus on limited scenarios, tool ecosystems, or interaction formats, makin…
+- 摘要：LLM-based verifiers are increasingly used to evaluate agent executions, but their reliability is typically measured under a single representation of the trajectory. In deployed agent systems, the same execution may be exposed through composed tools, delegation boundaries, or compacted histories, changing what executio…
 - 人工评审：待处理
 
-### [SafeRelBench: A Spatial-Relation-Aware Benchmark for Process-Level Safety in VLM-Driven Embodied Agents](https://arxiv.org/abs/2607.14543v1)
+### [Soteria: Formally Verified Planning with Runtime Enforcement for Safe LLM Agents](https://arxiv.org/abs/2611.17880v1)
 
-- 日期：2026-07-16
-- 作者：Huaigang Yang, Ya Li, Min Ren, Bo Dai 等
-- 分类：cs.RO, cs.AI
-- 相关性分：11
-- 摘要：Vision-language models (VLMs) are increasingly used as the reasoning backbone of embodied agents, enabling robots to interpret visual scenes, follow language instructions, and plan multi-step actions. In household environments, however, safety depends not only on recognizing objects, but also on how actions change the…
-- 人工评审：待处理
-
-### [RetroAgent: Harnessing LLMs to Search Over Structured Memory for Agentic Retrosynthesis Planning](https://arxiv.org/abs/2607.14512v1)
-
-- 日期：2026-07-16
-- 作者：Yanqiao Zhu, Jingru Gan, Xiaoqi Sun, Fang Sun 等
-- 分类：cs.AI, cs.CL, cs.LG
-- 相关性分：10
-- 摘要：Multi-step retrosynthesis planning seeks to decompose a target molecule into commercially available building blocks through a sequence of feasible reactions. The vast combinatorial search space makes this task challenging even for expert chemists. Traditional methods combine tree search with offline-trained value netw…
-- 人工评审：待处理
-
-### [StructureClaw: Traceable LLM Agents and an Executable Benchmark for Structural Engineering Workflows](https://arxiv.org/abs/2607.14896v1)
-
-- 日期：2026-07-16
-- 作者：Sizhong Qin, Yi Gu, Yao Jiang, Ao Cai 等
-- 分类：cs.SE, cs.AI, cs.MA
-- 相关性分：9
-- 摘要：Addressing a structural-engineering request requires more than a single answer; it requires a chain of interdependent artifacts: interpreted requirements, a computable model, validation records, solver outputs, code-check records, and a final report. Evaluations centered on question answering or script generation rare…
-- 人工评审：待处理
-
-### [MCPEvol-Bench: Benchmarking LLM Agent Performance Across Dynamic Evolutions of MCP Servers](https://arxiv.org/abs/2607.14642v1)
-
-- 日期：2026-07-16
-- 作者：Huanxi Liu, Kun Hu, Jiaqi Liao, Qiang Wang 等
+- 日期：2026-11-13
+- 作者：Mike He, Ankush Desai, Sharad Malik, Aarti Gupta
 - 分类：cs.AI, cs.SE
-- 相关性分：9
-- 摘要：As Model Context Protocol (MCP) servers emerge as the core infrastructure for connecting LLMs with external tools, existing benchmarks leverage real-world MCP servers to evaluate LLM agents' tool-using capabilities. However, these benchmarks overlook the continuous evolution of tool interfaces and functionalities with…
+- 相关性分：11
+- 摘要：LLM agents that execute multi-step tool calls must satisfy two objectives simultaneously: completing the user's task (utility) and conforming to domain policies and correctness constraints (safety). These objectives are in tension -- blocking an unsafe action prevents a violation but can leave the agent stranded with…
 - 人工评审：待处理
 
-### [TopoAgent: A Self-Evolving Topological Agent for Multimodal Scientific Reasoning](https://arxiv.org/abs/2607.14658v1)
+### [Envisioning Agentic Robotics: A New Era of Robotic Systems](https://arxiv.org/abs/2611.18359v1)
 
-- 日期：2026-07-16
-- 作者：Mingze Xu, Yinghui Li, Jiayi Kuang, Zhanhui Kang 等
-- 分类：cs.AI
+- 日期：2026-11-13
+- 作者：Grid Robotics, :, Qingfeng Lan, Duo Li 等
+- 分类：cs.RO, cs.AI, cs.CL, cs.CV
+- 相关性分：10
+- 摘要：The release of GPT-6 Astra marks the emergence of a new paradigm in robotics: agentic robotics. Within weeks, frontier models with agentic harnesses matched or exceeded task-specific policies on many embodied benchmarks. Instead of training a dedicated policy for each family of tasks, an agentic robotic system applies…
+- 人工评审：待处理
+
+### [SceneAgent: A Multi-Agent Framework for Portable Game Scene Generation](https://arxiv.org/abs/2611.17821v1)
+
+- 日期：2026-11-13
+- 作者：Xingyi Li, Jiahao Yang, Yiqin Zhu, Jingwen Ye 等
+- 分类：cs.CV, cs.AI
 - 相关性分：8
-- 摘要：While Multimodal Large Language Models (MLLMs) excel in general tasks, rigorous scientific reasoning remains challenging due to the limitations of monolithic, linear planning. Such sequential designs often suffer from visual-semantic misalignment, long-context hallucinations, and brittle execution under fixed task gra…
+- 摘要：Moving a scene generator to a new game engine requires more than exporting its final output: planning, construction tools, and stored experience may also depend on the original backend. We present SceneAgent, a multi-agent framework for reusing the construction process and its experience across backends. A canonical S…
 - 人工评审：待处理
 
-### [Plover: Steering GUI Agents through Plan-Centric Interaction](https://arxiv.org/abs/2607.15193v1)
+### [OutfitterBench: Evaluating LLM Agents on Long-Horizon Resource Allocation and Commitment Coordination](https://arxiv.org/abs/2611.17933v1)
 
-- 日期：2026-07-16
-- 作者：Madhumitha Venkatesan, Shicheng Wen, Jiajing Guo, Jorge Piazentin Ono 等
+- 日期：2026-11-13
+- 作者：Jie Huang, Yuecheng Hong, Yao Chen, Shengding Jiao 等
 - 分类：cs.AI
 - 相关性分：7
-- 摘要：Graphical user interface (GUI) automation remains challenging in real-world environments, where dynamic layouts, unexpected dialogs, and evolving interface states can cause autonomous agents to drift from user intent. Recent vision-based multimodal agents improve flexibility by operating directly over screenshots and…
+- 摘要：In many long-horizon settings, an agent's own choices create future constraints: committing finite capacity establishes future obligations and forecloses later opportunities. Sustaining performance therefore requires both keeping evolving plans feasible and comparing the value of resource allocations with the alternat…
 - 人工评审：待处理
 
-### [An Intelligent-Cloud Edge Multimodal Interaction System for Robots](https://arxiv.org/abs/2607.14675v1)
+### [Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination](https://arxiv.org/abs/2611.18514v1)
 
-- 日期：2026-07-16
-- 作者：Zihan Guo, Xiaoqi Li
-- 分类：cs.RO, cs.AI
+- 日期：2026-11-13
+- 作者：Mohamed Aghzal, Mor Geva, Gregory J. Stein, Ziyu Yao
+- 分类：cs.AI, cs.CL
 - 相关性分：6
-- 摘要：Robust human-robot interaction in complex environments requires accurate gesture perception, semantic scene understanding, and reliable task planning under limited onboard computing resources. This paper presents a cloud-edge multimodal interaction framework that integrates an enhanced YOLO-based gesture detector with…
+- 摘要：Mechanistic Interpretability (MI) has made significant progress in explaining the internal computations of Large Language Models (LLMs); however, these advances have yet to demonstrate comparable success in explaining the decision-making processes of LLM-based agents. This paper examines the challenges MI tools face w…
 - 人工评审：待处理
 
-### [SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration](https://arxiv.org/abs/2607.15257v1)
+### [Agentic AI for Discovering Fault-Tolerant Quantum Circuits](https://arxiv.org/abs/2611.18504v1)
 
-- 日期：2026-07-16
-- 作者：Yuyao Zhang, Junjie Gao, Zhengxian Wu, Jiaming Fan 等
-- 分类：cs.AI, cs.IR
-- 相关性分：4
-- 摘要：Recent advances in Tool-Integrated Large Language Models have made web search a core capability of information-seeking agents. However, as interaction histories grow, agents increasingly struggle to track task progress. When search attempts fail to yield useful evidence, current single- and multi-agent systems can bec…
+- 日期：2026-11-13
+- 作者：Aritra Lahiri, Florian Marquardt
+- 分类：quant-ph, cs.AI
+- 相关性分：6
+- 摘要：Scaling quantum computing toward practical quantum advantage is currently limited by the efficiency of circuits that operate on information encoded by quantum error-correcting codes. The full stack of quantum computing encompasses several tasks: preparation of logical code states, implementation of logical gates, logi…
 - 人工评审：待处理
 
-## Agent safety and human collaboration
+### [Can You Trust Your Finance Agent? Drift, Diagnosis and Auditable Intervention on One Shipped Financial Research Agent](https://arxiv.org/abs/2611.17939v1)
 
-### [FlowGuard: From Signals to Evidence for MCP Security Detection](https://arxiv.org/abs/2607.14754v1)
-
-- 日期：2026-07-16
-- 作者：Baichao An, Pei Chen, Geng Hong, Yueyue Chen 等
-- 分类：cs.CR
-- 相关性分：11
-- 摘要：The Model Context Protocol (MCP) enables LLM agents to interact with external tools through metadata exchange, tool invocation, and response consumption. Existing MCP security scanners primarily reason about suspicious semantic signals rather than real execution behaviors, which can lead to unreliable risk assessment.…
+- 日期：2026-11-13
+- 作者：Cosimo Galeone, Anna Ettorre, Ginevra Mariani, Minsu Park 等
+- 分类：cs.CL, cs.AI
+- 相关性分：6
+- 摘要：Can you trust a finance agent you did not build? We take the reference agent shipped with the Vals Finance Agent Benchmark v2, leave it untuned, and ask four questions a leaderboard score does not answer. Is the score stable? Seven identical runs on 18 questions pass between 105 and 123 of 149 rubric criteria, and the…
 - 人工评审：待处理
 
-### [MemPoison: Uncovering Persistent Memory Threats and Structural Blind Spots in LLM Agents](https://arxiv.org/abs/2607.14651v1)
+### [G-CAST: Governed Continual Self-Training for E-Commerce Agents under Evolving Demands](https://arxiv.org/abs/2611.17814v1)
 
-- 日期：2026-07-16
-- 作者：Jifeng Gao, Kang Xia, Yi Zhang, Xiaobin Hong 等
-- 分类：cs.CR, cs.AI
-- 相关性分：10
-- 摘要：Persistent external memory enhances agent continuity but introduces persistent security vulnerabilities: adversarial content can be injected via standard interaction channels, retained across turns, and later distort downstream behavior. To address this challenge, we propose MemPoison, a comprehensive benchmark and an…
+- 日期：2026-11-13
+- 作者：Yuechun Yu, Wenzheng Kong, Xiaofeng Mao, Jin Zhang
+- 分类：cs.AI, cs.CL
+- 相关性分：6
+- 摘要：With the rapid advancement of Large Language Models (LLMs), an increasing number of users are turning to LLM-powered agents for conversational shopping in e-commerce. However, the user needs continue to change as new product categories, procurement scenarios, and feature requests emerge. At the same time, the product'…
 - 人工评审：待处理
 
 ## Agent evaluation and reliability
 
-### [SciDiagramEdit: Learning to Edit Scientific Diagrams from Paper Revisions](https://arxiv.org/abs/2607.15272v1)
+### [VLAN: Vision-Language Accessible Navigation](https://arxiv.org/abs/2611.18346v1)
 
-- 日期：2026-07-16
-- 作者：Yasheng Sun, Zezi Zeng, Yifan Yang, Chong Luo 等
-- 分类：cs.CL, cs.AI
-- 相关性分：7
-- 摘要：Editing the figures in a research paper is a routine and time-consuming part of everyday research practice: authors relabel components, rearrange panels, and restyle visuals as they revise their manuscripts. Automating this editing workflow under a natural-language instruction, however, is challenging, because a scien…
+- 日期：2026-11-13
+- 作者：Jie Hu, Yu Zheng, Wenzhi Wu, Weixing Feng 等
+- 分类：cs.AI, cs.CV
+- 相关性分：9
+- 摘要：Accessible mobility is user-conditioned rather than scene-intrinsic, as walkable paths for one embodiment are inaccessible to another. Yet, existing benchmarks evaluate traversability under a fixed and limited embodiment. We present Vision-Language Accessible Navigation (VLAN), containing 1,000 scenes, 20K navigation…
 - 人工评审：待处理
 
-### [When Words Are Safe But Actions Kill: Probing Physical Danger Beyond Text Safety in Hidden-State Risk Space](https://arxiv.org/abs/2607.15218v1)
+### [When to Trust Simulated Patient Responses:Support-Gated World Models for Vasopressor Decision Support](https://arxiv.org/abs/2611.18458v1)
 
-- 日期：2026-07-16
-- 作者：Weimeng Wang, Ziqiang Wang, Zihang Zhan, Chuanpu Fu 等
-- 分类：cs.AI, cs.CR
-- 相关性分：7
-- 摘要：Large language models (LLMs) increasingly serve as high-level planners for embodied agents, where linguistically benign instructions can become unsafe once grounded in the physical world. We study whether this physically grounded danger is the same safety problem as ordinary text-level content danger. Through hidden-s…
-- 人工评审：待处理
-
-### [MM-IssueLoc: A Controlled Benchmark for Evaluating Visual Evidence in Multimodal Repository-Level Issue Localization](https://arxiv.org/abs/2607.15205v1)
-
-- 日期：2026-07-16
-- 作者：Shaoxiong Zhan, Shi Hu, Boyu Feng, Hai Lin 等
-- 分类：cs.SE, cs.AI
-- 相关性分：7
-- 摘要：Real repository issues routinely include visual evidence such as screenshots, error dialogs, rendered UI states, and logs, yet repository-level issue localization is evaluated mostly as a text-only task. Existing multimodal SE benchmarks evaluate end-to-end repair, entangling localization with patch synthesis and obsc…
-- 人工评审：待处理
-
-### [Bridge Evidence: Static Retrieval Utility Does Not Predict Causal Utility in Multi-Step Agentic Search](https://arxiv.org/abs/2607.15253v1)
-
-- 日期：2026-07-16
-- 作者：Debayan Mukhopadhyay, Utshab Kumar Ghosh, Shubham Chatterjee
-- 分类：cs.IR, cs.CL
-- 相关性分：5
-- 摘要：Retrieval systems are trained and evaluated on a static idea of usefulness: hand a document and a question to a reader model, see whether the answer improves, and score the document accordingly. The idea holds up when a document is read on its own. It breaks when a language model works as a search agent, issuing sever…
-- 人工评审：待处理
-
-### [Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents](https://arxiv.org/abs/2607.15095v1)
-
-- 日期：2026-07-16
-- 作者：Dylan Van Mulders, Matthias Bogaert, Dirk Van den Poel
-- 分类：cs.CL, cs.AI, cs.MA
-- 相关性分：5
-- 摘要：The formation of political coalitions is a complex negotiation driven by both concrete policy objectives and deep-seated ideological convictions. While Large Language Models (LLMs) open new avenues for computational political science, the neutrality and helpfulness biases instilled by Reinforcement Learning from Human…
-- 人工评审：待处理
-
-### [AutoSynthesis: An agentic system for automated meta-analysis](https://arxiv.org/abs/2607.15247v1)
-
-- 日期：2026-07-16
-- 作者：Moein Taherinezhad, Sebastian Maier, Gerardo Vitagliano, Francesco Pierri 等
+- 日期：2026-11-13
+- 作者：Yifan Jin, Tao Liu
 - 分类：cs.AI
-- 相关性分：4
-- 摘要：Evidence synthesis is crucial for turning primary research into reliable knowledge for science, medicine, education, and policy. Yet, quantitative evidence synthesis remains largely manual and difficult to scale. Here, we introduce AutoSynthesis, an end-to-end multi-agent system for automated meta-analysis. Given a re…
+- 相关性分：7
+- 摘要：Clinical world models expose language-model agents to predicted patient responses, but simulations can be unreliable for poorly supported treatments or unfamiliar hospitals. We introduce Support-Gated World-Model decision support, a lightweight extension of a propose--simulate--refine agent. A recurrent dynamics ensem…
 - 人工评审：待处理
 
-### [Concept-Guided Spatial Regularization for World Models in Atari Pong](https://arxiv.org/abs/2607.15142v1)
+### [Gamer: A Generalist Vision-Language-Action Foundation Model for Long-Horizon Real-Time Game Agent](https://arxiv.org/abs/2611.18397v1)
 
-- 日期：2026-07-16
-- 作者：Yukuan Lu, Zaishuo Xia, Weyl Lu, Yubei Chen
-- 分类：cs.AI, cs.LG
+- 日期：2026-11-13
+- 作者：Run Luo, Kuan Zhang, Qi Deng, Yukun Chen 等
+- 分类：cs.CL, cs.AI, cs.CV
+- 相关性分：7
+- 摘要：We introduce Gamer, a generalist agent framework built for long-horizon tasks in complex interactive environments. Its end-to-end architecture combines perception, memory management, and multi-step reasoning. A shared training and deployment pipeline supports interaction with both conventional 2D graphical interfaces…
+- 人工评审：待处理
+
+### [PrivacyPR: A Dataset of Real-World Privacy Fixes for Benchmarking Privacy-Aware Code Review](https://arxiv.org/abs/2611.18293v1)
+
+- 日期：2026-11-13
+- 作者：Hua Yang, Aditya Bhardwaj, Shidong Pan, Bowen Xu
+- 分类：cs.CR, cs.AI, cs.SE
+- 相关性分：6
+- 摘要：Coding agents increasingly review code, yet whether they catch the privacy defects that laws such as the GDPR require software to avoid remains largely untested, partly because few datasets connect real privacy defects to their accepted fixes and review context. We present PrivacyPR, a dataset of 4,131 merged GitHub p…
+- 人工评审：待处理
+
+### [PUMA-Former: Uncertainty-Aware Agentic Computation Offloading in MEO-LEO Satellite Networks With Incomplete Information](https://arxiv.org/abs/2611.18139v1)
+
+- 日期：2026-11-13
+- 作者：Yi Jing, Chunxiao Jiang, Jiawei Wang, Jiachen Sun
+- 分类：cs.NI, cs.AI
+- 相关性分：6
+- 摘要：Satellite edge computing distributes mobile workloads across moving processors whose service capacity must be coordinated over time. In medium Earth orbit (MEO)--low Earth orbit (LEO) networks, periodic reports leave CPU states stale or missing, making offloading sensitive to uncertain capacity and shared-destination…
+- 人工评审：待处理
+
+### [WeightBench: Evaluating Language Models as Weight-Space Programmers](https://arxiv.org/abs/2611.18553v1)
+
+- 日期：2026-11-13
+- 作者：Aayush Marasini, Barsat Khadka, Nick Rahimi
+- 分类：cs.LG, cs.AI
 - 相关性分：4
-- 摘要：World models are usually evaluated as components of model-based reinforcement learning (MBRL) systems, while the world models themselves are rarely studied in isolation. We examine five representative visual world-model agents in Atari Pong: DreamerV3, DIAMOND, TWISTER, Simulus, and STORM. After reproducing their trai…
+- 摘要：Recent work shows that large language models (LLMs) can operate directly on the parameters of other neural networks. They can read what a network was trained to do, fix a network that fails, and write working networks from scratch, all without gradient descent. This capability has been termed Weight-Space Programming…
 - 人工评审：待处理
 
 ## Coding agents
 
-### [Setup Complete, Now You Are Compromised: Weaponizing Setup Instructions Against AI Coding Agents](https://arxiv.org/abs/2607.15143v1)
+### [HerAgent: A Block-Level Checkpointing Harness for Coding-Agent Environment Setup](https://arxiv.org/abs/2611.18443v1)
 
-- 日期：2026-07-16
-- 作者：Aadesh Bagmar, Pushkar Saraf
-- 分类：cs.CR, cs.HC, cs.SE
+- 日期：2026-11-13
+- 作者：Xiang Li, Siyu Lu, Federica Sarro, Claire Le Goues 等
+- 分类：cs.SE
 - 相关性分：7
-- 摘要：AI coding agents set up projects by reading documentation and installing the dependencies it lists, without verifying their names, sources, or known vulnerabilities. By editing only a README, requirements file, or Makefile, an attacker can redirect the agent to an untrusted registry, a known-vulnerable version, or a w…
+- 摘要：Modern coding agents rely on establishing executable software environments before they can perform software engineering tasks such as testing, debugging, and patch validation. Existing setup agents typically control progress at either single-command or whole-script granularity, making recovery either too local to remo…
 - 人工评审：待处理
 
-### [FirmPilot: Evidence-Guided Multi-Agent Environment Recovery for IoT Firmware Rehosting](https://arxiv.org/abs/2607.14903v1)
+### [OCTAVE: A Capability-Resolved Benchmark for End-to-End HTML5 Game Generation](https://arxiv.org/abs/2611.17681v1)
 
-- 日期：2026-07-16
-- 作者：Yanbing Shen, Fan Zhang, Haitao Xu
-- 分类：cs.SE
+- 日期：2026-11-13
+- 作者：Kehang Li, Xinlan Xu, Yulin Jin, Heng Cao 等
+- 分类：cs.AI, cs.SE
 - 相关性分：6
-- 摘要：Firmware rehosting executes firmware images in emulated environments such as QEMU to enable scalable dynamic analysis of Internet of Things (IoT) devices. In practice, rehosting pipelines remain fragile across diverse real-world firmware images, as reaching an externally observable execution state depends on tightly c…
+- 摘要：Complete game generation requires agents to coordinate rules, interactions, states, and presentation over a long development process. A single aggregate score obscures which capabilities are implemented and which requirements remain unmet. We present OCTAVE, a benchmark for complete HTML5 game generation organized aro…
 - 人工评审：待处理
 
-### [AI Prototyper: A Figma Plugin for Decomposition-Based GUI Prototyping with LLMs](https://arxiv.org/abs/2607.14830v1)
+### [Interpreting Coding Agents Through Their Behavioral Trajectories](https://arxiv.org/abs/2611.17440v1)
 
-- 日期：2026-07-16
-- 作者：Tawatchai Salangsingha, Sami Ashkan, Md Zia Ullah, Iain McGregor
-- 分类：cs.SE
+- 日期：2026-11-12
+- 作者：Ibragim Badertdinov, Alexander Golubev
+- 分类：cs.SE, cs.AI, cs.LG
+- 相关性分：6
+- 摘要：Standard coding-agent benchmarks primarily evaluate binary task success, treating execution as a black box and obscuring the behaviors that produce those outcomes. We analyze a large corpus of 143,209 execution trajectories from 125 agent configurations spanning 117 unique models. To enable comparisons across heteroge…
+- 人工评审：待处理
+
+### [From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration](https://arxiv.org/abs/2611.18484v1)
+
+- 日期：2026-11-13
+- 作者：Ivana Ragusa, Lorenzo Guiducci, Filippo Cavallo
+- 分类：cs.RO, cs.AI, cs.MA, cs.SE
 - 相关性分：5
-- 摘要：Graphical user interface (GUI) prototyping remains a time-consuming activity that demands both design expertise and considerable manual effort. As GUI prototypes are non-code artifacts that evolve alongside requirements throughout the development cycle, automating their generation is directly relevant to software main…
+- 摘要：AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain hum…
+- 人工评审：待处理
+
+### [PerfArena: Ranking LLMs by Code Performance](https://arxiv.org/abs/2611.18030v1)
+
+- 日期：2026-11-13
+- 作者：Rui Rua, Hailemariam Mersha, Joao Paulo Fernandes, Karim Ali
+- 分类：cs.PF, cs.CL, cs.SE
+- 相关性分：5
+- 摘要：Industry now relies on LLMs to write a large share of production code. Although that code is mostly, but not always, correct, correctness alone does not determine whether it is fit for repeated and extensive use, which depends on what the code costs in time, memory and energy. Most code-generation benchmarks nonethele…
+- 人工评审：待处理
+
+## Agent safety and human collaboration
+
+### [Large Language Model-Empowered Intelligent Agent for Adaptive Fast-Charging Control of Lithium-Ion Batteries](https://arxiv.org/abs/2611.18140v1)
+
+- 日期：2026-11-13
+- 作者：Joey Chan, Haoyu Pan, Zhen Chen, ErShun Pan
+- 分类：cs.AI
+- 相关性分：5
+- 摘要：Fast charging of lithium-ion batteries is a multi-objective control problem that requires reducing charging time and sustaining high energy throughput while suppressing accelerated degradation and safety-critical electrochemical reactions. Conventional protocols are easy to implement but have limited ability to adapt…
+- 人工评审：待处理
+
+### [Forget the Lineage: Forward-Secure, Lineage-Complete Cryptographic Erasure for LLM-Agent Memory](https://arxiv.org/abs/2611.18133v1)
+
+- 日期：2026-11-13
+- 作者：Yulliwas Ameur, Billal Mokhtari, Samia Bouzefrane
+- 分类：cs.CR
+- 相关性分：5
+- 摘要：Large language model (LLM) agents keep a long-term memory that the model itself writes: summaries, extracted facts and embeddings derived from what users said. Deleting a message is therefore not enough: its derivatives, storage residue and backups survive. We define lineage-complete forward-secure erasure: after a fo…
+- 人工评审：待处理
+
+### [Interpretable weight-space programming builds transparent transformers and brain encoding models](https://arxiv.org/abs/2611.18114v1)
+
+- 日期：2026-11-13
+- 作者：Yash Mehta, Chandan Singh, Weijia Xu, Richard J. Antonello 等
+- 分类：cs.CE, cs.AI
+- 相关性分：5
+- 摘要：Neural networks are powerful predictors, yet their opacity limits their usefulness in science, where the goal is explanation rather than mere prediction. In neuroscience, for example, deep encoding models accurately predict brain activity in response to natural stimuli, but struggle to reveal which stimulus features d…
 - 人工评审：待处理
